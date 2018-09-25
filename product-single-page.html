@@ -297,11 +297,22 @@
 
     <!--   page wrapper -->
     <div class="page-wrapper">
-         <!-- Products details section1 -->
+         <!-- Product details section1 -->
          <div class="row product-detials-wrapper">
-            <div class="col l3 m3 s12">
-            </div>
-            <div class="col l4 m4 s12">
+             <!--slider images in mobile view -->
+                <div class="col hide-on-med-and-up s12">
+                        <div class="single-product-slider-mobile">
+                            <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1513691159/N11046051A_1.jpg"></a></div>
+                            <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1511430529/N11046051A_2.jpg"></a></div>
+                            <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1511430527/N11046051A_3.jpg"></a></div>
+                            <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1511430521/N11046051A_4.jpg"></a></div>
+                            <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1511430531/N11046051A_5.jpg"></a></div>
+                        </div>
+                </div>
+                <div class="col l3 hide-on-med-and-down">
+                </div>
+            <!-- product info-->
+            <div class="col l4 m5 s12">
                 <div class="products-info">
                     <a href="#!"><span>أبل</span></a>
                     <h6>آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G</h6>   
@@ -353,7 +364,27 @@
                  </div>
                 </div>
             </div>
-            <div class="col l5 m5 s12">
+            <!--images slider in desktop and mediam view -->
+            <!-- Slider image -->
+            <div class="col l4 m5 hide-on-small-only">
+                <div class="single-product-slider">
+                    <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1513691159/N11046051A_1.jpg"></a></div>
+                    <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1511430529/N11046051A_2.jpg"></a></div>
+                    <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1511430527/N11046051A_3.jpg"></a></div>
+                    <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1511430521/N11046051A_4.jpg"></a></div>
+                    <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1511430531/N11046051A_5.jpg"></a></div>
+                </div>
+            </div>
+             <!-- Nav Slider image -->
+            <div class="col l1 m2 hide-on-small-only">
+                <div class="single-product-nav">
+                    <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-thumbnail-v1/v1513691159/N11046051A_1.jpg"></a></div>
+                    <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-thumbnail-v1/v1511430529/N11046051A_2.jpg"></a></div>
+                    <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-thumbnail-v1/v1511430527/N11046051A_3.jpg"></a></div>
+                    <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-thumbnail-v1/v1511430521/N11046051A_4.jpg"></a></div>
+                    <div class="single-product-img"><a herf="#"><img src="https://k.nooncdn.com/t_desktop-thumbnail-v1/v1511430531/N11046051A_5.jpg"></a></div>
+                </div>
+                <span class="numbers_of_slider"style="display:none">5</span>
             </div>
         </div>
         <!--End Products details section1 -->
@@ -1118,6 +1149,7 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+
 </body>
 
 </html>
