@@ -1,0 +1,652 @@
+<!-- TODO | Shaikhah -->
+<!--
+    1. Fix container padding for all tabs to be the same - Especially overview tab.
+    2. Add pagenation to reviews tab.
+    3. double test responsiveness.
+    4. Calculate aggregate rating chart.
+    5. Add image zoom effect.  
+-->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/rtl.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!--  Main Menu Navbar  -->
+    <nav class="main-menu">
+        <div class="nav-wrapper valign-wrapper">
+            <a href="#" data-target="mobile-view" class="sidenav-trigger mobile-nav"><i class="material-icons black-text">menu</i></a>
+            <a href="#!" class="brand-logo right"><img src="images/logo.png" alt="qonaa"></a>
+            <form class="search center-block">
+                <div class="input-field">
+                    <input id="search" type="search" placeholder="ما الذي تبحث عنه؟" required>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                </div>
+            </form>
+            <ul>
+                <div class="nav-wrapper no-padding">
+                    <ul class="account-wrapper left">
+                        <li class="account-box"><a class="account-dropdown hide-on-small-only" href="#!" data-target="account-dropdown">تسجيل الدخول أو الإشتراك<i class="material-icons left">arrow_drop_down</i></a></li>
+                        <li><a href="#"><span class="material-icons cart">shopping_cart</span></a></li>
+                    </ul>
+                </div>
+            </ul>
+            <div class="overlay"></div>
+        </div>
+
+        <!-- Account Dropdown -->
+        <ul id="account-dropdown" class="dropdown-content">
+            <li>
+                <p class="center grey-text">تسوقت لدينا من قبل؟</p>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate" placeholder="البريد الإلكتروني">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate" placeholder="كلمة السر" style="margin-bottom: 0">
+                        <a class="forgot-password" href="">هل نسيت كلمة السر؟</a>
+                    </div>
+                </div>
+                <a class="sign-in-cta waves-effect waves-light btn">تسجيل الدخول</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <p class="center grey-text">ليس لديك حساب؟
+                    <a class="sign-up-cta" href="signup.html">اشترك الآن</a>
+                </p>
+
+            </li>
+        </ul>
+
+        <ul class="sidenav" id="mobile-view">
+            <li>
+                <div class="user-view">
+                    <span class="material-icons black-text sidenav-close">clear</span>
+                    <div class="brand-logo">
+                        <a href="#!" class="right"><img src="images/logo.png" alt="qonaa"></a>
+                    </div>
+                    <div class="account">
+                        <p class="title">مرحباً بكـ في قنة!</p>
+                        <!--
+                        <a href="#name"><span class="white-text name">John Doe</span></a>
+                        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+-->
+                    </div>
+
+                </div>
+            </li>
+            <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+            <li><a href="#!">Second Link</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="subheader">جميع الفئات</a></li>
+            <li>
+                <ul class="collapsible collapsible-accordion no-padding">
+                    <li>
+                        <a class="collapsible-header">الأزياء<i class="material-icons">arrow_drop_down</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#">الأزياء النسائية</a></li>
+                                <li><a href="#">الأحذية</a></li>
+                                <li><a href="#">أزياء رجالية</a></li>
+                                <li><a href="#">الساعات</a></li>
+                                <li><a href="#">إكسسوارات الأزياء</a></li>
+                                <li><a href="#">النظارات</a></li>
+                                <li><a href="#">حقائب يد للنساء</a></li>
+                                <li><a href="#">أزياء البنات</a></li>
+                                <li><a href="#">أزياء الأولاد</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="collapsible-header">الإلكترونيات<i class="material-icons">arrow_drop_down</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li class=""><a href="#" class="">أجهزة الكمبيوتر المحمولة</a></li>
+                                <li class=""><a href="#" class="">ألعاب الفيديو</a></li>
+                                <li class=""><a href="#" class="">التلفزيونات</a></li>
+                                <li class=""><a href="#" class="">أجهزة منزلية</a></li>
+                                <li class=""><a href="#" class="">سماعات</a></li>
+                                <li class=""><a href="#" class="">سماعات الرأس و سماعات الأذن</a></li>
+                                <li class=""><a href="#" class="">أجهزة الصوت/الفيديو</a></li>
+                                <li class=""><a href="#" class="">الساعات الذكية والإكسسوارات</a></li>
+                                <li class=""><a href="#" class="">كاميرات وتصوير وفيديو</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="collapsible-header">الموبايلات<i class="material-icons">arrow_drop_down</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li class=""><a href="#" class="">الموبايلات</a></li>
+                                <li class=""><a href="#" class="">أجهزة التابلت</a></li>
+                                <li class=""><a href="#" class="">الساعات الذكية</a></li>
+                                <li class=""><a href="#" class="">بور بانك</a></li>
+                                <li class=""><a href="#" class="">سماعات الموبايل</a></li>
+                                <li class=""><a href="#" class="">كابلات الشحن</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="collapsible-header">المنزل والمطبخ<i class="material-icons">arrow_drop_down</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li class=""><a href="#" class="">مستلزمات السرير</a></li>
+                                <li class=""><a href="#" class="">الحمامات</a></li>
+                                <li class=""><a href="#" class="">ديكورات المنازل</a></li>
+                                <li class=""><a href="#" class="">مطبخ وأدوات طعام</a></li>
+                                <li class=""><a href="#" class="">أجهزة منزلية</a></li>
+                                <li class=""><a href="#" class="">الأدوات وتحسين المنزل</a></li>
+                                <li class=""><a href="#" class="">الأثاث</a></li>
+                                <li class=""><a href="#" class="">تخزين وتنظيم منزلي</a></li>
+                                <li class=""><a href="#" class="">مستلزمات الحيوانات الأليفة</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#!">الجمال والعطور</a></li>
+                    <li><a class="red-text" href="#!">عروض</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <nav class="second-menu hide-on-med-and-down">
+        <div class="nav-wrapper valign-wrapper">
+            <ul>
+                <li><a class="red-text" href="#!">عروض</a></li>
+                <li><a href="#!">الجمال والعطور</a></li>
+                <li><a class="home-and-kitchen-dropdown" href="#!" data-target="home-and-kitchen-dropdown">المنزل والمطبخ</a></li>
+                <li><a class="mobiles-dropdown" href="#!" data-target="mobiles-dropdown">الموبايلات</a></li>
+                <li><a class="elctronic-dropdown" href="#!" data-target="elctronic-dropdown">الإلكترونيات</a></li>
+                <li><a class="fashion-dropdown" href="#!" data-target="fashion-dropdown">الأزياء</a></li>
+            </ul>
+        </div>
+
+        <!--  Dropdown content -->
+        <div id="fashion-dropdown" class="dropdown-content">
+            <div class="contentWrapper">
+                <div class="categoriesColumn">
+                    <p class="title">الفئات</p>
+                    <ul class="subCategoriesList right">
+                        <li class=""><a href="#" class="">الأزياء النسائية</a></li>
+                        <li class=""><a href="#" class="">الأحذية</a></li>
+                        <li class=""><a href="#" class="">أزياء رجالية</a></li>
+                        <li class=""><a href="#" class="">الساعات</a></li>
+                        <li class=""><a href="#" class="">إكسسوارات الأزياء</a></li>
+                        <li class=""><a href="#" class="">النظارات</a></li>
+                        <li class=""><a href="#" class="">حقائب يد للنساء</a></li>
+                        <li class=""><a href="#" class="">أزياء البنات</a></li>
+                        <li class=""><a href="#" class="">أزياء الأولاد</a></li>
+                    </ul>
+                </div>
+                <div class="bannersColumn">
+                    <div class="bannersContent">
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-fashion-1.png" class=""></a></div>
+                    </div>
+                </div>
+                <div id="fashion-banner2" class="bannersColumn">
+                    <div class="bannersContent">
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-fashion-2.png" class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-beauty-2.png" class=""></a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="elctronic-dropdown" class="dropdown-content">
+            <div class="contentWrapper">
+                <div class="categoriesColumn">
+                    <p class="title">الفئات</p>
+                    <ul class="subCategoriesList right">
+                        <li class=""><a href="#" class="">أجهزة الكمبيوتر المحمولة</a></li>
+                        <li class=""><a href="#" class="">ألعاب الفيديو</a></li>
+                        <li class=""><a href="#" class="">التلفزيونات</a></li>
+                        <li class=""><a href="#" class="">أجهزة منزلية</a></li>
+                        <li class=""><a href="#" class="">سماعات</a></li>
+                        <li class=""><a href="#" class="">سماعات الرأس و سماعات الأذن</a></li>
+                        <li class=""><a href="#" class="">أجهزة الصوت/الفيديو</a></li>
+                        <li class=""><a href="#" class="">الساعات الذكية والإكسسوارات</a></li>
+                        <li class=""><a href="#" class="">كاميرات وتصوير وفيديو</a></li>
+                    </ul>
+                </div>
+                <div class="bannersColumn">
+                    <div class="bannersContent">
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-1.png" class=""></a></div>
+                    </div>
+                </div>
+                <div id="fashion-banner2" class="bannersColumn">
+                    <div class="bannersContent">
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png" class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png" class=""></a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="mobiles-dropdown" class="dropdown-content">
+            <div class="contentWrapper">
+                <div class="categoriesColumn">
+                    <p class="title">الفئات</p>
+                    <ul class="subCategoriesList right">
+                        <li class=""><a href="#" class="">الموبايلات</a></li>
+                        <li class=""><a href="#" class="">أجهزة التابلت</a></li>
+                        <li class=""><a href="#" class="">الساعات الذكية</a></li>
+                        <li class=""><a href="#" class="">بور بانك</a></li>
+                        <li class=""><a href="#" class="">سماعات الموبايل</a></li>
+                        <li class=""><a href="#" class="">كابلات الشحن</a></li>
+                    </ul>
+                </div>
+                <div class="bannersColumn">
+                    <div class="bannersContent">
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-1.png" class=""></a></div>
+                    </div>
+                </div>
+                <div id="fashion-banner2" class="bannersColumn">
+                    <div class="bannersContent">
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png" class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png" class=""></a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="home-and-kitchen-dropdown" class="dropdown-content">
+            <div class="contentWrapper">
+                <div class="categoriesColumn">
+                    <p class="title">الفئات</p>
+                    <ul class="subCategoriesList right">
+                        <li class=""><a href="#" class="">مستلزمات السرير</a></li>
+                        <li class=""><a href="#" class="">الحمامات</a></li>
+                        <li class=""><a href="#" class="">ديكورات المنازل</a></li>
+                        <li class=""><a href="#" class="">مطبخ وأدوات طعام</a></li>
+                        <li class=""><a href="#" class="">أجهزة منزلية</a></li>
+                        <li class=""><a href="#" class="">الأدوات وتحسين المنزل</a></li>
+                        <li class=""><a href="#" class="">الأثاث</a></li>
+                        <li class=""><a href="#" class="">تخزين وتنظيم منزلي</a></li>
+                        <li class=""><a href="#" class="">مستلزمات الحيوانات الأليفة</a></li>
+                    </ul>
+                </div>
+                <div class="bannersColumn">
+                    <div class="bannersContent">
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-home-1.png" class=""></a></div>
+                    </div>
+                </div>
+                <div id="fashion-banner2" class="bannersColumn">
+                    <div class="bannersContent">
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-home-2.png" class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-home-2.png" class=""></a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <!--   page wrapper -->
+    <div class="page-wrapper">
+
+
+        <div class="product-details">
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab"><a href="#overview">نظرة عامة</a></li>
+                        <li class="tab"><a class="active" href="#spec">المواصفات</a></li>
+                        <li class="tab"><a href="#reviews">التقييمات</a></li>
+                    </ul>
+                </div>
+                <div class="tabs-container">
+                    <div id="overview" class="col s12">
+                        <p class="title">
+                            مميزات المنتج
+                        </p>
+                        <ul>
+                            <li>الجسم المعدني مدعم بزجاج معزز بالأيون وطلاء مقاوم للزيوت يعزز المتانة</li>
+                            <li>شاشة رتينا عالية الوضوح توفر تجربة بصرية مذهلة</li>
+                            <li>تم تصميم إيماءات الأصابع للتحكم في الهاتف بيد واحدة بسهولة</li>
+                            <li>تم تصميم إيماءات الأصابع للتحكم في الهاتف بيد واحدة بسهولة</li>
+                        </ul>
+                    </div>
+                    <div id="spec" class="col s12">
+                        <div class="col m12 l6 right">
+                            <table class="striped">
+                                <tbody>
+                                    <tr>
+                                        <td>اسم اللون</td>
+                                        <td>ذهبي</td>
+                                    </tr>
+                                    <tr>
+                                        <td>دقة الكاميرا الأساسية</td>
+                                        <td>8 ميغا بكسل</td>
+                                    </tr>
+                                    <tr>
+                                        <td>دقة الشاشة</td>
+                                        <td>750x1334</td>
+                                    </tr>
+                                    <tr>
+                                        <td>حجم الشاشة</td>
+                                        <td>4.7 بوصة</td>
+                                    </tr>
+                                    <tr>
+                                        <td>وزن المنتج</td>
+                                        <td>143 غم</td>
+                                    </tr>
+                                    <tr>
+                                        <td>حجم البطارية</td>
+                                        <td>1810 مللي أمبير / ساعة</td>
+                                    </tr>
+                                    <tr>
+                                        <td>عدد شريحة Sim</td>
+                                        <td>شريحة هاتف</td>
+                                    </tr>
+                                    <tr>
+                                        <td>الشبكة</td>
+                                        <td>4G LTE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>دقة الكاميرا الثانوية</td>
+                                        <td>1.2 ميغا بكسل</td>
+                                    </tr>
+                                    <tr>
+                                        <td>رقم الموديل</td>
+                                        <td>iPhone 6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>اسم الموديل</td>
+                                        <td>iPhone 6 With FaceTime</td>
+                                    </tr>
+                                    <tr>
+                                        <td>طول المنتج</td>
+                                        <td>138.1 مم</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ارتفاع المنتج</td>
+                                        <td>6.9 مم</td>
+                                    </tr>
+                                    <tr>
+                                        <td>عرض/عمق المنتج</td>
+                                        <td>67 مم</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CPU</td>
+                                        <td>Dual-core 1.4 GHz Typhoon (ARM v8-based)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WLAN</td>
+                                        <td>Wi-Fi 802.11 a/b/g/n/ac</td>
+                                    </tr>
+                                    <tr>
+                                        <td>الذاكرة الداخلية</td>
+                                        <td>32 غيغابايت</td>
+                                    </tr>
+                                    <tr>
+                                        <td>نوع الشريحة</td>
+                                        <td>بطاقة SIM نانو</td>
+                                    </tr>
+                                    <tr>
+                                        <td>قدرة الطلب الصوتي</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>نطاق تردد الشبكة</td>
+                                        <td>GSM / LTE / UMTS</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col m12 l6">
+                            <table class="striped">
+                                <tbody>
+                                    <tr>
+                                        <td>اسم اللون</td>
+                                        <td>ذهبي</td>
+                                    </tr>
+                                    <tr>
+                                        <td>دقة الكاميرا الأساسية</td>
+                                        <td>8 ميغا بكسل</td>
+                                    </tr>
+                                    <tr>
+                                        <td>دقة الشاشة</td>
+                                        <td>750x1334</td>
+                                    </tr>
+                                    <tr>
+                                        <td>حجم الشاشة</td>
+                                        <td>4.7 بوصة</td>
+                                    </tr>
+                                    <tr>
+                                        <td>وزن المنتج</td>
+                                        <td>143 غم</td>
+                                    </tr>
+                                    <tr>
+                                        <td>حجم البطارية</td>
+                                        <td>1810 مللي أمبير / ساعة</td>
+                                    </tr>
+                                    <tr>
+                                        <td>عدد شريحة Sim</td>
+                                        <td>شريحة هاتف</td>
+                                    </tr>
+                                    <tr>
+                                        <td>الشبكة</td>
+                                        <td>4G LTE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>دقة الكاميرا الثانوية</td>
+                                        <td>1.2 ميغا بكسل</td>
+                                    </tr>
+                                    <tr>
+                                        <td>رقم الموديل</td>
+                                        <td>iPhone 6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>اسم الموديل</td>
+                                        <td>iPhone 6 With FaceTime</td>
+                                    </tr>
+                                    <tr>
+                                        <td>طول المنتج</td>
+                                        <td>138.1 مم</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ارتفاع المنتج</td>
+                                        <td>6.9 مم</td>
+                                    </tr>
+                                    <tr>
+                                        <td>عرض/عمق المنتج</td>
+                                        <td>67 مم</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CPU</td>
+                                        <td>Dual-core 1.4 GHz Typhoon (ARM v8-based)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WLAN</td>
+                                        <td>Wi-Fi 802.11 a/b/g/n/ac</td>
+                                    </tr>
+                                    <tr>
+                                        <td>الذاكرة الداخلية</td>
+                                        <td>32 غيغابايت</td>
+                                    </tr>
+                                    <tr>
+                                        <td>نوع الشريحة</td>
+                                        <td>بطاقة SIM نانو</td>
+                                    </tr>
+                                    <tr>
+                                        <td>قدرة الطلب الصوتي</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>نطاق تردد الشبكة</td>
+                                        <td>GSM / LTE / UMTS</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="reviews" class="col s12">
+                        <div class="reviews-sub-wrapper">
+                            <div class="rating-container col s12 l6">
+                                <div class="badge-wrapper">
+                                    <p class="title">التصنيف العام</p>
+                                    <div class="aggregate-rating">
+                                        <span class="stars-outer">
+                                            <span class="stars-inner"></span>
+                                        </span>
+                                        <span class="rating-val">2.5</span>
+                                    </div>
+                                    <p class="count">استناداً إلى 400 تقييم</p>
+                                </div>
+                                <div class="rating-chart col s6 m8">
+                                    <table>
+                                        <tbody>
+                                            <tr class="chart-row">
+                                                <td class="rating-level">5</td>
+                                                <td class="value-bar">
+                                                    <div class="progress">
+                                                        <div class="determinate" style="width: 70%"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="value-num">43</td>
+                                            </tr>
+                                            <tr class="chart-row">
+                                                <td class="rating-level">4</td>
+                                                <td class="value-bar">
+                                                    <div class="progress">
+                                                        <div class="determinate" style="width: 50%"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="value-num">33</td>
+                                            </tr>
+                                            <tr class="chart-row">
+                                                <td class="rating-level">3</td>
+                                                <td class="value-bar">
+                                                    <div class="progress">
+                                                        <div class="determinate" style="width: 10%"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="value-num">200</td>
+                                            </tr>
+                                            <tr class="chart-row">
+                                                <td class="rating-level">2</td>
+                                                <td class="value-bar">
+                                                    <div class="progress">
+                                                        <div class="determinate" style="width: 10%"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="value-num">200</td>
+                                            </tr>
+                                            <tr class="chart-row">
+                                                <td class="rating-level">1</td>
+                                                <td class="value-bar">
+                                                    <div class="progress">
+                                                        <div class="determinate" style="width: 10%"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="value-num">200</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="highlight-wrapper">
+                                <div>
+                                    <p class="title">الإيجابيات</p>
+                                    <ul>
+                                        <li>كاميرا جيدة</li>
+                                        <li>التصميم</li>
+                                        <li>سهل الاستخدام</li>
+                                        <li>سريع</li>
+                                        <li>كاميرا ممتازة</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="title">السلبيات</p>
+                                    <ul>
+                                        <li>مرتفع الثمن</li>
+                                        <li>غالى الثمن</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-container">
+                            <div class="review-segment">
+                                <div class="rating">
+                                    <span class="stars-outer">
+                                        <span class="stars-inner"></span>
+                                    </span>
+                                    <span class="rating-val">4</span>
+                                </div>
+                                <div class="header">
+                                    <span class="author">Shaikhah Maasher</span>
+                                    <span class="date-published">24-9-2018</span>
+                                </div>
+                                <div class="highlight-container">
+                                    <p class="pros">Face ID, AnEmoji, Stereo Speakers, 3D Touch</p>
+                                    <p class="cons">No Micro SD, Small Battery, RAM Management Is Worst, No Headphone Jack, IP 67, No Fast Charger In The Box, High Price, Expensive Back Replacement</p>
+                                </div>
+                                <div class="description">
+                                    <p>It's just for showoff i don't get why people buy iPhones glad i shifted from iPhone X to Galaxy S9+ the iPhone X has annoying notch also it has no headphone jack but still it is only 67 water &amp; dust resistant on the other hand Galaxy S9+ has headphone jack &amp; still retains IP 68 water &amp; dust...</p>
+                                </div>
+                            </div>
+                            <div class="review-segment">
+                                <div class="rating">
+                                    <span class="stars-outer">
+                                        <span class="stars-inner"></span>
+                                    </span>
+                                    <span class="rating-val">4</span>
+                                </div>
+                                <div class="header">
+                                    <span class="author">Shaikhah Maasher</span>
+                                    <span class="date-published">24-9-2018</span>
+                                </div>
+                                <div class="highlight-container">
+                                    <p class="pros">Face ID, AnEmoji, Stereo Speakers, 3D Touch</p>
+                                    <p class="cons">No Micro SD, Small Battery, RAM Management Is Worst, No Headphone Jack, IP 67, No Fast Charger In The Box, High Price, Expensive Back Replacement</p>
+                                </div>
+                                <div class="description">
+                                    <p>It's just for showoff i don't get why people buy iPhones glad i shifted from iPhone X to Galaxy S9+ the iPhone X has annoying notch also it has no headphone jack but still it is only 67 water &amp; dust resistant on the other hand Galaxy S9+ has headphone jack &amp; still retains IP 68 water &amp; dust...</p>
+                                </div>
+                            </div>
+                            <div class="review-segment">
+                                <div class="rating">
+                                    <span class="stars-outer">
+                                        <span class="stars-inner"></span>
+                                    </span>
+                                    <span class="rating-val">4</span>
+                                </div>
+                                <div class="header">
+                                    <span class="author">Shaikhah Maasher</span>
+                                    <span class="date-published">24-9-2018</span>
+                                </div>
+                                <div class="highlight-container">
+                                    <p class="pros">Face ID, AnEmoji, Stereo Speakers, 3D Touch</p>
+                                    <p class="cons">No Micro SD, Small Battery, RAM Management Is Worst, No Headphone Jack, IP 67, No Fast Charger In The Box, High Price, Expensive Back Replacement</p>
+                                </div>
+                                <div class="description">
+                                    <p>It's just for showoff i don't get why people buy iPhones glad i shifted from iPhone X to Galaxy S9+ the iPhone X has annoying notch also it has no headphone jack but still it is only 67 water &amp; dust resistant on the other hand Galaxy S9+ has headphone jack &amp; still retains IP 68 water &amp; dust...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+body {
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.header {
+    margin: 40px auto;
+}
+
+.header img {
+    width: 80px;
+}
+
+.sign-container {
+    width: 80%;
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+.sign-container .input-field .active {
+  color: #9e9e9e;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #e2e5f1;
+    -webkit-box-shadow: 0 1px 0 0 #e2e5f1;
+    box-shadow: 0 1px 0 0 #e2e5f1;
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=url]:not(.browser-default):focus:not([readonly]) + label,
+input[type=time]:not(.browser-default):focus:not([readonly]) + label,
+input[type=date]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label,
+input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
+input[type=number]:not(.browser-default):focus:not([readonly]) + label,
+input[type=search]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: #9e9e9e;
+}
+
+input {
+    border-bottom-color: rgb(226, 229, 241) ;
+}
+
+.sign-container .row {
+    margin-bottom: 0;
+}
+
+.sign-container .row .btn {
+    width: 100%;
+    background-color: #1D3557;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.sign-in-cta {
+    margin: 50px;
+}
+
+.sign-in-cta .title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sign-in-cta .welcome {
+    font-size: 20px;
+    margin-bottom: -15px;
+}
+
+.forgot-password {
+    font-size: 12px;
+    text-align: center;
+    margin: 3px;
+}
