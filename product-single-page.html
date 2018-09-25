@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link type="text/css" rel="stylesheet" href="slick/slick-theme.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/rtl.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -295,8 +297,67 @@
 
     <!--   page wrapper -->
     <div class="page-wrapper">
-
-
+         <!-- Products details section1 -->
+         <div class="row product-detials-wrapper">
+            <div class="col l3 m3 s12">
+            </div>
+            <div class="col l4 m4 s12">
+                <div class="products-info">
+                    <a href="#!"><span>أبل</span></a>
+                    <h6>آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G</h6>   
+                    <p class="product-model">رقم الموديل:2345</p>
+                    <div class="product-rating">             
+                        <div class="stars-outer">
+                            <span class="stars-inner"></span>
+                        </div>
+                        <span class= "rating-score">4.5</span>
+                        <span class="rating-total">(4568) تقييم </span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">300 ر.س.</span>
+                        <span class="sale"> خصم 20%</span>
+                        <span class="new-price">280 ر.س.</span>
+                    </div>
+                </div>
+                <div class="product-order-info">
+                  <div class="col l6 s6">
+                        <label>اللون</label>
+                        <select  class="browser-default">
+                        <option value="1" selected>ذهبي</option>
+                        <option value="2">أبيض</option>
+                        <option value="3">فضي</option>
+                        </select>
+                  </div>
+                  <div class="col l6 s6">
+                        <label>الحجم</label>
+                         <select  class="browser-default">
+                         <option value="1" selected>صغير</option>
+                         <option value="2">وسط</option>
+                         <option value="3">كبير</option>
+                         </select>
+                 </div>
+                 <div class="adding-to-cart">
+                        <div class="input-field col l8 s10" style="height: 52px;">
+                            <a style="width:100%; height:100%" class="waves-effect waves-light btn">إضافة لعربة التسوق</a> 
+                        </div>
+                        <div class="col l4 s2">
+                                <label class="order-quatity">الكمية</label>
+                                <select class="browser-default quantity">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="3">4</option>
+                                <option value="3">5</option>
+                                </select>
+                        </div>
+                 </div>
+                </div>
+            </div>
+            <div class="col l5 m5 s12">
+            </div>
+        </div>
+        <!--End Products details section1 -->
+         <!--Products details section2  -->
         <div class="product-details">
             <div class="row">
                 <div class="col s12">
@@ -641,11 +702,421 @@
             </div>
 
         </div>
-    </div>
+          <!--End Products details section2  -->
+          <!-- Related products Slider -->
 
+          <div class="related-products-wrapper">
+            <div>
+                <h4 class="related-product-title">قد يعجبك أيضا</h4>
+            </div>
+            <div class="row products-slider" style="position:relative;">
+                <div class="your-class" dir="rtl">
+                    <!-- First products -->
+                    <div class="card sticky-action">
+                        <div class="sale_icon">
+                            %خصم 20
+                        </div>
+                        <div class="add_to_wish_list">
+                            <a href="" data-toggle="tooltip" data-placement="top" title="Add to wish list">
+                                <i class="material-icons wish-shape" style="color:#A8DADC">favorite_border</i></a>
+                        </div>
+                        <div class="card-image waves-effect waves-block waves-light img-height">
+                            <a href="">
+                                <img src="https://a.nooncdn.com/t_desktop-pdp-v1/v1504437686/N11043507A_1.jpg">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">
+                                <i class="activator material-icons left">more_vert</i>
+                                <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            </span>
+                            <strong class="price-old"> 20 س.ر. </strong>
+                            <strong class="price-new"> 80 س.ر.</strong>
+                        </div>
+                        <div class="card-reveal card-reveal-position " style="text-align:right">
+                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                            <p>آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G</p>
+                        </div>
+                    </div>
+                    <!-- Second products -->
+                    <div class="card sticky-action">
+                        <div class="sale_icon">
+                            %خصم 20
+                        </div>
+                        <div class="add_to_wish_list">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Add to wish list">
+                                <i class="material-icons wish-shape" style="color:#A8DADC">favorite_border</i></a>
+                        </div>
+                        <div class="card-image waves-effect waves-block waves-light img-height">
+                            <a href="#">
+                                <img src="https://a.nooncdn.com/t_desktop-pdp-v1/v1504437686/N11043507A_1.jpg">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">
+                                <i class="activator material-icons left">more_vert</i>
+                                <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            </span>
+                            <strong class="price-old"> 20 س.ر. </strong>
+                            <strong class="price-new"> 80 س.ر.</strong>
+                        </div>
+                        <div class="card-reveal card-reveal-position " style="text-align:right">
+                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                            <p>آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G</p>
+                        </div>
+                    </div>
+                    <!-- third products -->
+                    <div class="card sticky-action">
+                        <div class="sale_icon">
+                            %خصم 20
+                        </div>
+                        <div class="add_to_wish_list">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Add to wish list">
+                                <i class="material-icons wish-shape" style="color:#A8DADC">favorite_border</i></a>
+                        </div>
+                        <div class="card-image waves-effect waves-block waves-light img-height">
+                            <a href="#">
+                                <img src="https://a.nooncdn.com/t_desktop-pdp-v1/v1504437686/N11043507A_1.jpg">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">
+                                <i class="activator material-icons left">more_vert</i>
+                                <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            </span>
+                            <strong class="price-old"> 20 س.ر. </strong>
+                            <strong class="price-new"> 80 س.ر.</strong>
+                        </div>
+                        <div class="card-reveal card-reveal-position " style="text-align:right">
+                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                            <p>آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G</p>
+                        </div>
+                    </div>
+                    <!--4th products  -->
+                    <div class="card sticky-action">
+                        <div class="sale_icon">
+                            %خصم 20
+                        </div>
+                        <div class="add_to_wish_list">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Add to wish list">
+                                <i class="material-icons wish-shape" style="color:#A8DADC">favorite_border</i></a>
+                        </div>
+                        <div class="card-image waves-effect waves-block waves-light img-height">
+                            <a href="#">
+                                <img src="https://a.nooncdn.com/t_desktop-pdp-v1/v1504437686/N11043507A_1.jpg">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">
+                                <i class="activator material-icons left">more_vert</i>
+                                <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            </span>
+                            <strong class="price-old"> 20 س.ر. </strong>
+                            <strong class="price-new"> 80 س.ر.</strong>
+                        </div>
+                        <div class="card-reveal card-reveal-position " style="text-align:right">
+                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                            <p>آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G</p>
+                        </div>
+                    </div>
+                    <!-- 5th products -->
+                    <div class="card sticky-action">
+                        <div class="sale_icon">
+                            %خصم 20
+                        </div>
+                        <div class="add_to_wish_list">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Add to wish list">
+                                <i class="material-icons wish-shape" style="color:#A8DADC">favorite_border</i></a>
+                        </div>
+                        <div class="card-image waves-effect waves-block waves-light img-height">
+                            <a href="#">
+                                <img src="https://a.nooncdn.com/t_desktop-pdp-v1/v1504437686/N11043507A_1.jpg">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">
+                                <i class="activator material-icons left">more_vert</i>
+                                <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            </span>
+                            <strong class="price-old"> 20 س.ر. </strong>
+                            <strong class="price-new"> 80 س.ر.</strong>
+                        </div>
+                        <div class="card-reveal card-reveal-position " style="text-align:right">
+                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                            <p>آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G</p>
+                        </div>
+                    </div>
+                    <!-- 6th products -->
+                    <div class="card sticky-action">
+                        <div class="sale_icon">
+                            %خصم 20
+                        </div>
+                        <div class="add_to_wish_list">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Add to wish list">
+                                <i class="material-icons wish-shape" style="color:#A8DADC">favorite_border</i></a>
+                        </div>
+                        <div class="card-image waves-effect waves-block waves-light img-height">
+                            <a href="#">
+                                <img src="https://a.nooncdn.com/t_desktop-pdp-v1/v1504437686/N11043507A_1.jpg">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">
+                                <i class="activator material-icons left">more_vert</i>
+                                <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            </span>
+                            <strong class="price-old"> 20 س.ر. </strong>
+                            <strong class="price-new"> 80 س.ر.</strong>
+                        </div>
+                        <div class="card-reveal card-reveal-position " style="text-align:right">
+                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                            <p>آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G</p>
+                        </div>
+                    </div>
+                    <!-- 7th products -->
+                    <div class="card sticky-action">
+                        <div class="sale_icon">
+                            %خصم 20
+                        </div>
+                        <div class="add_to_wish_list">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Add to wish list">
+                                <i class="material-icons wish-shape" style="color:#A8DADC">favorite_border</i></a>
+                        </div>
+                        <div class="card-image waves-effect waves-block waves-light img-height">
+                            <a href="#">
+                                <img src="https://a.nooncdn.com/t_desktop-pdp-v1/v1504437686/N11043507A_1.jpg">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">
+                                <i class="activator material-icons left">more_vert</i>
+                                <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            </span>
+                            <strong class="price-old"> 20 س.ر. </strong>
+                            <strong class="price-new"> 80 س.ر.</strong>
+                        </div>
+                        <div class="card-reveal card-reveal-position " style="text-align:right">
+                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                            <p>آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G</p>
+                        </div>
+                    </div>
+                    <!-- 8th products -->
+                    <div class="card sticky-action">
+                        <div class="sale_icon">
+                            %خصم 20
+                        </div>
+                        <div class="add_to_wish_list">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Add to wish list">
+                                <i class="material-icons wish-shape" style="color:#A8DADC">favorite_border</i></a>
+                        </div>
+                        <div class="card-image waves-effect waves-block waves-light img-height">
+                            <a href="#">
+                                <img src="https://a.nooncdn.com/t_desktop-pdp-v1/v1504437686/N11043507A_1.jpg">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">
+                                <i class="activator material-icons left">more_vert</i>
+                                <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            </span>
+                            <strong class="price-old"> 20 س.ر. </strong>
+                            <strong class="price-new"> 80 س.ر.</strong>
+                        </div>
+                        <div class="card-reveal card-reveal-position " style="text-align:right">
+                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                            <p>آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G</p>
+                        </div>
+                    </div>
+                    <!-- 9th products -->
+                    <div class="card sticky-action">
+                        <div class="sale_icon">
+                            %خصم 20
+                        </div>
+                        <div class="add_to_wish_list">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Add to wish list">
+                                <i class="material-icons wish-shape" style="color:#A8DADC">favorite_border</i></a>
+                        </div>
+                        <div class="card-image waves-effect waves-block waves-light img-height">
+                            <a href="#">
+                                <img src="https://a.nooncdn.com/t_desktop-pdp-v1/v1504437686/N11043507A_1.jpg">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">
+                                <i class="activator material-icons left">more_vert</i>
+                                <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            </span>
+                            <strong class="price-old"> 20 س.ر. </strong>
+                            <strong class="price-new"> 80 س.ر.</strong>
+                        </div>
+                        <div class="card-reveal card-reveal-position " style="text-align:right">
+                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                            <p>آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G</p>
+                        </div>
+                    </div>
+                    <!--10th products -->
+                    <div class="card sticky-action">
+                        <div class="sale_icon">
+                            %خصم 20
+                        </div>
+                        <div class="add_to_wish_list">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Add to wish list">
+                                <i class="material-icons wish-shape" style="color:#A8DADC">favorite_border</i></a>
+                        </div>
+                        <div class="card-image waves-effect waves-block waves-light img-height">
+                            <a href="#">
+                                <img src="https://a.nooncdn.com/t_desktop-pdp-v1/v1504437686/N11043507A_1.jpg">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">
+                                <i class="activator material-icons left">more_vert</i>
+                                <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            </span>
+                            <strong class="price-old"> 20 س.ر. </strong>
+                            <strong class="price-new"> 80 س.ر.</strong>
+                        </div>
+                        <div class="card-reveal card-reveal-position " style="text-align:right">
+                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                            <p>آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G</p>
+                        </div>
+                    </div>
+                    <!-- 11th products -->
+                    <div class="card sticky-action">
+                        <div class="sale_icon">
+                            %خصم 20
+                        </div>
+                        <div class="add_to_wish_list">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Add to wish list">
+                                <i class="material-icons wish-shape" style="color:#A8DADC">favorite_border</i></a>
+                        </div>
+                        <div class="card-image waves-effect waves-block waves-light img-height">
+                            <a href="#">
+                                <img src="https://a.nooncdn.com/t_desktop-pdp-v1/v1504437686/N11043507A_1.jpg">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">
+                                <i class="activator material-icons left">more_vert</i>
+                                <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            </span>
+                            <strong class="price-old"> 20 س.ر. </strong>
+                            <strong class="price-new"> 80 س.ر.</strong>
+                        </div>
+                        <div class="card-reveal card-reveal-position " style="text-align:right">
+                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                            <p>آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G</p>
+                        </div>
+                    </div>
+                    <!-- 12th products -->
+                    <div class="card sticky-action">
+                        <div class="sale_icon">
+                            %خصم 20
+                        </div>
+                        <div class="add_to_wish_list">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Add to wish list">
+                                <i class="material-icons wish-shape" style="color:#A8DADC">favorite_border</i></a>
+                        </div>
+                        <div class="card-image waves-effect waves-block waves-light img-height">
+                            <a href="#">
+                                <img src="https://a.nooncdn.com/t_desktop-pdp-v1/v1504437686/N11043507A_1.jpg">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">
+                                <i class="activator material-icons left">more_vert</i>
+                                <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            </span>
+                            <strong class="price-old"> 20 س.ر. </strong>
+                            <strong class="price-new"> 80 س.ر.</strong>
+                        </div>
+                        <div class="card-reveal card-reveal-position " style="text-align:right">
+                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                            <p>آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="prev">
+                    <span class="prev-arrow">
+                        <i class="material-icons right">keyboard_arrow_right</i> </span>
+                </div>
+                <div class="next">
+                    <span class="next-arrow">
+                        <i class="material-icons left">keyboard_arrow_left</i> </span>
+                </div>
+            </div>
+          </div>
+          <!-- End Related products Sldier -->
+           <!-- Footer -->
+           <footer class="page-footer">
+            <div class="container">
+                <div class="row" dir="rtl">
+                    <div class="col l4 m4 s12">
+                        <h5 class=""> إلكترونيات</h5>
+                        <ul>
+                            <li><a class="" href="#!">أجهزة منزلية</a></li>
+                            <li><a class="" href="#!">أجهزة الكمبيوتر المحمول</a></li>
+                            <li><a class="" href="#!">سماعات</a></li>
+                            <li><a class="" href="#!">التلفزيونات</a></li>
+                            <li><a class="" href="#!">أجهزة الصوت والفيديو</a></li>
+                            <li><a class="" href="#!">الساعات الذكية والإكسسوارات</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l4 m4 s12">
+                        <h5 class="">المنزل</h5>
+                        <ul>
+                            <li><a class="" href="#!">ديكورات المنزل</a></li>
+                            <li><a class="" href="#!">مطبخ و أدوات طعام</a></li>
+                            <li><a class="" href="#!">تخزيين وتنظيم منزلي</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l4 m4 s12">
+                        <h5 class="">جوالات</h5>
+                        <ul>
+                            <li><a class="" href="#!">أبل</a></li>
+                            <li><a class="" href="#!">سامسونج</a></li>
+                            <li><a class="" href="#!">هواواي</a></li>
+                            <li><a class="" href="#!">لينفو</a></li>
+                            <li><a class="" href="#!">ون بلس</a></li>
+                            <li><a class="" href="#!">اتش تي سي</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" dir="rtl" style="margin-bottom:40px; text-align:center;">
+                    <div class="col l12 m12 s12">
+                        <h5 class=""> تواصل معنا</h5>
+                        <ul>
+                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating   waves-effect waves-light"><i class="fa fa-facebook"></i></a></li>
+                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating   waves-effect waves-light"><i class="fa fa-snapchat"></i></a></li>
+                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating  waves-effect waves-light"><i class="fa fa-instagram"></i></a></li>
+                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating   waves-effect waves-light"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright" style="color: #1D3557">
+                <div class="container row" dir=rtl style="text-align: center;">
+                    <div class="col l8 m8  s12">
+                        <ul>
+                            <li style="display: inline-block; margin-left:20px;"><a class="" href="#!">سياسة الضمان</a></li>
+                            <li style="display: inline-block; margin-left:20px;"><a class="" href="#!">شروط البيع</a></li>
+                            <li style="display: inline-block; margin-left:20px;"><a class="" href="#!">سياسة الخصوصية</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l4 m4  s12">
+
+                        © جميع الحقوق محفوظة
+                        <a class="" href="#!">لشركة طور</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+    </div>
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 </body>
 
