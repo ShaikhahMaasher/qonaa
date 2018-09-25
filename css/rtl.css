@@ -1,0 +1,45 @@
+html {
+    direction: rtl;
+    unicode-bidi: isolate;
+}
+
+.sidenav {
+    padding-right: 0px;
+}
+
+.input-field.col label {
+    right: .75rem;
+    left: 0;
+}
+
+.input-field>label:not(.label-icon).active {
+    -webkit-transform: translateY(-14px) scale(1.01);
+    transform: translateY(-14px) scale(1.01);
+}
+
+#account-dropdown input {
+    padding-right: 2%;
+    padding-left: 0;
+}
+
+.chart-row .progress .determinate {
+    right: 0;
+    left: auto;
+    direction: rtl;
+}
+
+td.rating-level {
+    text-align: left;
+}
+
+table td {
+    text-align: right;
+}
+
+.stars-outer {
+    transform: scale(-1, 1);
+}
+
+#reviews .rating-container, #reviews .rating-container .badge-wrapper {
+    float: right;
+}
