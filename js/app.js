@@ -165,3 +165,38 @@ $(window).resize(function () {
     }
 });
 /** End Products Slider for Gategories, best selling*/
+/** Single product image slider desktop view*/
+$('.single-product-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    rtl: true,
+    asNavFor: '.single-product-nav'
+});
+$('.single-product-nav').each(function (){
+    $numberOfSlider=parseInt($(this).next('.numbers_of_slider').text());
+$(this).slick({
+    slidesToShow:$numberOfSlider,
+    slidesToScroll: 1,
+    asNavFor: '.single-product-slider',
+    dots: false,
+    vartical:true,
+    arrows:false,
+    rtl: true,
+    vertical:true,
+    focusOnSelect: true
+})
+})
+;
+/** End Single product image slider desktop view*/
+/** Single product image slider mobile view*/
+$('.single-product-slider-mobile').slick({
+dots: true,
+infinite: true,
+autoplay: true,
+autoplaySpeed: 6000,
+arrows: false,
+rtl: true,
+});
+/** End Single product image slider mobile view*/
