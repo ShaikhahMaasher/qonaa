@@ -12,7 +12,7 @@ html {
     left: 0;
 }
 
-.input-field>label:not(.label-icon).active {
+.input-field > label:not(.label-icon).active {
     -webkit-transform: translateY(-14px) scale(1.01);
     transform: translateY(-14px) scale(1.01);
 }
@@ -40,6 +40,12 @@ table td {
     transform: scale(-1, 1);
 }
 
-#reviews .rating-container, #reviews .rating-container .badge-wrapper {
+#reviews .rating-container,
+#reviews .rating-container .badge-wrapper {
     float: right;
+}
+
+/* Mobile Sidenav */
+#mobile-view .user-view .account p {
+    text-align: left;
 }

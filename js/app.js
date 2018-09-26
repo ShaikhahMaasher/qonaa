@@ -174,29 +174,40 @@ $('.single-product-slider').slick({
     rtl: true,
     asNavFor: '.single-product-nav'
 });
-$('.single-product-nav').each(function (){
-    $numberOfSlider=parseInt($(this).next('.numbers_of_slider').text());
-$(this).slick({
-    slidesToShow:$numberOfSlider,
-    slidesToScroll: 1,
-    asNavFor: '.single-product-slider',
-    dots: false,
-    vartical:true,
-    arrows:false,
-    rtl: true,
-    vertical:true,
-    focusOnSelect: true
-})
-})
-;
+$('.single-product-nav').each(function () {
+    $numberOfSlider = parseInt($(this).next('.numbers_of_slider').text());
+    $(this).slick({
+        slidesToShow: $numberOfSlider,
+        slidesToScroll: 1,
+        asNavFor: '.single-product-slider',
+        dots: false,
+        vartical: true,
+        arrows: false,
+        rtl: true,
+        vertical: true,
+        focusOnSelect: true
+    })
+});
 /** End Single product image slider desktop view*/
 /** Single product image slider mobile view*/
 $('.single-product-slider-mobile').slick({
-dots: true,
-infinite: true,
-autoplay: true,
-autoplaySpeed: 6000,
-arrows: false,
-rtl: true,
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    arrows: false,
+    rtl: true,
 });
 /** End Single product image slider mobile view*/
+
+/** STYLE TOP MENU SEARCH */
+function addMobileSearch() {
+    $('.main-menu .search .input-field').addClass('mobile-search-input');
+    $('#search-back').style.display = "block";
+}
+function removeMobileSearch() {
+    $('.main-menu .search .input-field').removeClass('mobile-search-input');
+}
+$("#search-icon").click(addMobileSearch);
+$("#search").focusout(removeMobileSearch);
+/** END OF STYLING TOP MENU SEARCH */

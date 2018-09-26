@@ -4,10 +4,10 @@
     2. Fix close action of sidenav on mobiles and hide it on desktop. 
     3. Fix on hover overlay of categories menu. 
     4. Add signed in senario for account dropdown and sidenav. 
-    5. Complete mobile sidenav. 
+    5. Complete mobile sidenav. (DONE)
     6. Add cart count style. 
     7. Add wishlist icon for signed in user. 
-    8. Complete mobile search style. 
+    8. Complete mobile search style. (DONE)
     9. Replace google icons by font awesome.  
 -->
 <!DOCTYPE html>
@@ -33,8 +33,9 @@
             <a href="#!" class="brand-logo right"><img src="images/logo.png" alt="qonaa"></a>
             <form class="search center-block">
                 <div class="input-field">
+                    <i id="search-back" class="fa fa-long-arrow-right" style="display: none"></i>
                     <input id="search" type="search" placeholder="ما الذي تبحث عنه؟" required>
-                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <label class="label-icon" for="search"><i id="search-icon" class="material-icons">search</i></label>
                 </div>
             </form>
             <ul>
@@ -83,17 +84,38 @@
                     </div>
                     <div class="account">
                         <p class="title">مرحباً بكـ في قنة!</p>
-                        <!--
-                        <a href="#name"><span class="white-text name">John Doe</span></a>
-                        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
--->
                     </div>
-
+                </div>
+                <div id="mobile-main-menu">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-home"></i>
+                                <span>الرئيسية</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-sign-in"></i>
+                                <span>تسجيل الدخول</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-user-plus"></i>
+                                <span>اشترك الآن</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>عربة التسوق</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </li>
-            <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-            <li><a href="#!">Second Link</a></li>
-            <li>
+            <li id="menu-divider">
                 <div class="divider"></div>
             </li>
             <li><a class="subheader">جميع الفئات</a></li>
