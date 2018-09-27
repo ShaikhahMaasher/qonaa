@@ -229,8 +229,8 @@ span {
 }
 
 @media only screen and (max-width: 750px) {
-    .account-dropdown {
-        display: none;
+    .account-dropdown, .wishlist-container {
+        display: none !important;
     }
 
     .account-wrapper {
@@ -326,8 +326,33 @@ i.material-icons.left,
     padding: 0;
 }
 
-.nav-wrapper .cart {
+.main-menu .cart-container .cart, .main-menu .wishlist-container .wishlist {
     vertical-align: middle;
+    font-size: 26px;
+    transform: scale(-1, 1);
+}
+
+.main-menu .cart-container .badge, .main-menu .wishlist-container .badge,
+#mobile-main-menu .badge {
+    float: none;
+    margin-right: 22px;
+    margin-left: 0;
+    height: auto;
+    -webkit-font-smoothing: auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: auto;
+    padding: 0 5px;
+    min-width: unset;
+    font-size: 12px;
+    left: auto;
+    width: fit-content;
+    color: #fff;
+}
+
+#mobile-view #mobile-main-menu .badge {
+    top: 65px;
 }
 
 .dropdown-content i {
@@ -335,11 +360,9 @@ i.material-icons.left,
 }
 
 #account-dropdown p {
-    margin: 5px;
+    margin: 5px auto;
     font-size: 12px;
-    display: inline-block;
-    float: right;
-    padding-right: 5px;
+    text-align: center;
 }
 
 #account-dropdown .sign-in-cta {
@@ -348,6 +371,7 @@ i.material-icons.left,
     color: #fff;
     background-color: #1D3557;
     padding: 5px;
+    margin: 10px 0;
     font-size: 14px;
 }
 
@@ -540,8 +564,43 @@ body {
 
 #account-dropdown {
     max-width: 200px;
-    width: 180px;
-    left: 65px !important;
+    width: 190px !important;
+    overflow-y: hidden;
+    height: auto !important;
+    padding: 10px 15px;
+    max-width: 200px;
+}
+
+.signed-in .nav-wrapper #account-dropdown .user-links a {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding: 5px 15px;
+    font-size: 14px;
+}
+
+.signed-in .nav-wrapper #account-dropdown .user-links i {
+    margin: 0;
+    margin-left: 5px;
+    color: #1D3557;
+    font-size: 22px;
+}
+
+.signed-in #account-dropdown .user-links a:hover {
+    background-color: #f7f7fa;
+}
+
+#account-dropdown .sign-out-cta, #account-dropdown .sign-up-cta {
+    min-height: unset;
+}
+
+.signed-in #account-dropdown .sign-out-cta a {
+    padding: 10px 25px 4px;
+    font-size: 12px;
+}
+
+#account-dropdown .row .input-field {
+    padding: 0;
 }
 
 #account-dropdown .forgot-password {
@@ -560,8 +619,30 @@ body {
     float: right;
 }
 
-.account-dropdown {
+.account-box .account-dropdown {
     padding-left: 0;
+}
+
+.signed-in .account-box .account-dropdown {
+    font-weight: bold;
+    font-size: 1.1rem;
+    max-width: 170px;
+    text-align: center;
+    padding: 0px 10px;
+    flex: 1 1 0%;
+    display: flex;
+    overflow: hidden;
+}
+
+li.account-box .account-dropdown .user-name {
+    position: relative;
+    white-space: nowrap;
+    font-size: 0.77rem;
+    font-weight: 400;
+    overflow: hidden;
+    top: -15px;
+    left: auto;
+    right: 35%;
 }
 
 /* Mobile sidenav */
@@ -656,8 +737,8 @@ body {
 }
 
 #mobile-main-menu span {
-    font-weight: 600;
-    font-size: 0.71666rem;
+    font-weight: 400;
+    font-size: 0.65rem;
     white-space: nowrap;
 }
 
@@ -1124,9 +1205,13 @@ body {
         right: 25%;
         font-size: 18px;
     }
+
+    .main-menu .cart-container .badge, .main-menu .wishlist-container .badge {
+        font-size: 9px;
+    }
 }
 
-/*End Single product detalis section1 */
+/* End Single product detalis section1 */
 /* Related producst */
 .related-products-wrapper {
     padding: 5px 30px;
@@ -1187,4 +1272,4 @@ body {
     height: 300px;
 }
 
-/* End single product slider of imges  */
+/* End single product slider of images  */

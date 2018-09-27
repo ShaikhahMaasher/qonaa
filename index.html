@@ -1,11 +1,10 @@
-<!-- TODO | Shaikhah -->
-<!--
-    1. Fix click overlay effect on account dropdown & mobile sidenav.
-    2. Fix close action of sidenav on mobiles and hide it on desktop. 
-    3. Fix on hover overlay of categories menu. 
+<!-- TODO: @Shaikhah 
+    1. FIXME: click overlay effect on account dropdown & mobile sidenav.
+    2. FIXME: close action of sidenav on mobiles and hide it on desktop. 
+    3. FIXME: on hover overlay of categories menu. 
     4. Add signed in senario for account dropdown and sidenav. 
     5. Complete mobile sidenav. (DONE)
-    6. Add cart count style. 
+    6. Add cart count style. (DONE)
     7. Add wishlist icon for signed in user. 
     8. Complete mobile search style. (DONE)
     9. Replace google icons by font awesome.  
@@ -41,8 +40,17 @@
             <ul>
                 <div class="nav-wrapper no-padding">
                     <ul class="account-wrapper left">
-                        <li class="account-box"><a class="account-dropdown hide-on-small-only" href="#!" data-target="account-dropdown">تسجيل الدخول أو الإشتراك<i class="material-icons left">arrow_drop_down</i></a></li>
-                        <li><a href="#"><span class="material-icons cart">shopping_cart</span></a></li>
+                        <li class="account-box">
+                            <a class="account-dropdown hide-on-small-only" href="#!" data-target="account-dropdown">تسجيل
+                                الدخول أو الإشتراك<i class="material-icons left">arrow_drop_down</i>
+                            </a>
+                        </li>
+                        <li class="cart-container">
+                            <a href="#">
+                                <span class="material-icons cart">shopping_cart</span>
+                                <span class="badge red">12</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </ul>
@@ -67,7 +75,7 @@
                 <a class="sign-in-cta waves-effect waves-light btn">تسجيل الدخول</a>
             </li>
             <li class="divider"></li>
-            <li>
+            <li class="sign-up-cta">
                 <p class="center grey-text">ليس لديك حساب؟
                     <a class="sign-up-cta" href="signup.html">اشترك الآن</a>
                 </p>
@@ -89,25 +97,26 @@
                 <div id="mobile-main-menu">
                     <ul>
                         <li>
-                            <a href="">
+                            <a href="index.html">
                                 <i class="fa fa-home"></i>
                                 <span>الرئيسية</span>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="signin.html">
                                 <i class="fa fa-sign-in"></i>
                                 <span>تسجيل الدخول</span>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="signup.html">
                                 <i class="fa fa-user-plus"></i>
                                 <span>اشترك الآن</span>
                             </a>
                         </li>
                         <li>
                             <a href="">
+                                <span class="badge red">12</span>
                                 <i class="fa fa-shopping-cart"></i>
                                 <span>عربة التسوق</span>
                             </a>
@@ -125,7 +134,6 @@
                         <a class="collapsible-header">الأزياء<i class="material-icons">arrow_drop_down</i></a>
                         <div class="collapsible-body">
                             <ul>
-                                <li><a href="#">الأزياء النسائية</a></li>
                                 <li><a href="#">الأحذية</a></li>
                                 <li><a href="#">أزياء رجالية</a></li>
                                 <li><a href="#">الساعات</a></li>
@@ -134,6 +142,7 @@
                                 <li><a href="#">حقائب يد للنساء</a></li>
                                 <li><a href="#">أزياء البنات</a></li>
                                 <li><a href="#">أزياء الأولاد</a></li>
+                                <li><a href="#">الأزياء النسائية</a></li>
                             </ul>
                         </div>
                     </li>
@@ -193,7 +202,8 @@
             <ul>
                 <li><a class="red-text" href="#!">عروض</a></li>
                 <li><a href="#!">الجمال والعطور</a></li>
-                <li><a class="home-and-kitchen-dropdown" href="#!" data-target="home-and-kitchen-dropdown">المنزل والمطبخ</a></li>
+                <li><a class="home-and-kitchen-dropdown" href="#!" data-target="home-and-kitchen-dropdown">المنزل
+                        والمطبخ</a></li>
                 <li><a class="mobiles-dropdown" href="#!" data-target="mobiles-dropdown">الموبايلات</a></li>
                 <li><a class="elctronic-dropdown" href="#!" data-target="elctronic-dropdown">الإلكترونيات</a></li>
                 <li><a class="fashion-dropdown" href="#!" data-target="fashion-dropdown">الأزياء</a></li>
@@ -219,13 +229,16 @@
                 </div>
                 <div class="bannersColumn">
                     <div class="bannersContent">
-                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-fashion-1.png" class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-fashion-1.png"
+                                    class=""></a></div>
                     </div>
                 </div>
                 <div id="fashion-banner2" class="bannersColumn">
                     <div class="bannersContent">
-                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-fashion-2.png" class=""></a></div>
-                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-beauty-2.png" class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-fashion-2.png"
+                                    class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-beauty-2.png"
+                                    class=""></a></div>
                     </div>
                 </div>
 
@@ -249,13 +262,16 @@
                 </div>
                 <div class="bannersColumn">
                     <div class="bannersContent">
-                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-1.png" class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-1.png"
+                                    class=""></a></div>
                     </div>
                 </div>
                 <div id="fashion-banner2" class="bannersColumn">
                     <div class="bannersContent">
-                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png" class=""></a></div>
-                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png" class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png"
+                                    class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png"
+                                    class=""></a></div>
                     </div>
                 </div>
 
@@ -276,13 +292,16 @@
                 </div>
                 <div class="bannersColumn">
                     <div class="bannersContent">
-                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-1.png" class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-1.png"
+                                    class=""></a></div>
                     </div>
                 </div>
                 <div id="fashion-banner2" class="bannersColumn">
                     <div class="bannersContent">
-                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png" class=""></a></div>
-                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png" class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png"
+                                    class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png"
+                                    class=""></a></div>
                     </div>
                 </div>
 
@@ -306,13 +325,16 @@
                 </div>
                 <div class="bannersColumn">
                     <div class="bannersContent">
-                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-home-1.png" class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-home-1.png"
+                                    class=""></a></div>
                     </div>
                 </div>
                 <div id="fashion-banner2" class="bannersColumn">
                     <div class="bannersContent">
-                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-home-2.png" class=""></a></div>
-                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-home-2.png" class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-home-2.png"
+                                    class=""></a></div>
+                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-home-2.png"
+                                    class=""></a></div>
                     </div>
                 </div>
 
@@ -345,32 +367,38 @@
 
         <!-- Ads Section -->
         <div class="single-ad-container">
-            <img src="https://k.nooncdn.com/cms/pages/20180912/d463afc522294bd4eb0c61efd66521f6/ar_banner-01Home.gif" alt="">
+            <img src="https://k.nooncdn.com/cms/pages/20180912/d463afc522294bd4eb0c61efd66521f6/ar_banner-01Home.gif"
+                alt="">
         </div>
 
         <div class="categories-wrapper">
             <div class="row">
                 <div class="col s12 m6 l6 right">
-                    <img class="responsive-img" src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-09.png" alt="">
+                    <img class="responsive-img" src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-09.png"
+                        alt="">
                 </div>
                 <div class="col s12 m6 l6">
                     <div class="row">
                         <div class="col s6 l6">
-                            <img class="responsive-img" src="https://cms.souqcdn.com/cms/boxes/img/desktop/1536667501_Men.jpg" alt="">
+                            <img class="responsive-img" src="https://cms.souqcdn.com/cms/boxes/img/desktop/1536667501_Men.jpg"
+                                alt="">
                             <p>ملابس الرجال</p>
                         </div>
                         <div class="col s6 l6">
-                            <img class="responsive-img" src="https://cms.souqcdn.com/cms/boxes/img/desktop/1536667501_Women.jpg" alt="">
+                            <img class="responsive-img" src="https://cms.souqcdn.com/cms/boxes/img/desktop/1536667501_Women.jpg"
+                                alt="">
                             <p>ملابس النساء</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s6 l6">
-                            <img class="responsive-img" src="https://cms.souqcdn.com/cms/boxes/img/desktop/1536667436_Shoes.jpg" alt="">
+                            <img class="responsive-img" src="https://cms.souqcdn.com/cms/boxes/img/desktop/1536667436_Shoes.jpg"
+                                alt="">
                             <p>أحذية</p>
                         </div>
                         <div class="col s6 l6">
-                            <img class="responsive-img" src="https://cms.souqcdn.com/cms/boxes/img/desktop/1536667436_Swimming%20Wear.jpg" alt="">
+                            <img class="responsive-img" src="https://cms.souqcdn.com/cms/boxes/img/desktop/1536667436_Swimming%20Wear.jpg"
+                                alt="">
                             <p>ملابس السباحة</p>
                         </div>
                     </div>
@@ -381,10 +409,12 @@
         <div class="categories-wrapper">
             <div class="row">
                 <div class="col s6 right no-padding">
-                    <img src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-33.png" alt="">
+                    <img src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-33.png"
+                        alt="">
                 </div>
                 <div class="col s6 no-padding">
-                    <img src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-34.png" alt="">
+                    <img src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-34.png"
+                        alt="">
                 </div>
             </div>
         </div>
@@ -392,23 +422,28 @@
         <div class="categories-wrapper">
             <div class="row">
                 <div class="col s12 l6 right">
-                    <img class="responsive-img" src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-19.png" alt="">
+                    <img class="responsive-img" src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-19.png"
+                        alt="">
                 </div>
                 <div class="col s12 l6">
                     <div class="row">
                         <div class="col s6 l6">
-                            <img class="responsive-img" src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-20.png" alt="">
+                            <img class="responsive-img" src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-20.png"
+                                alt="">
                         </div>
                         <div class="col s6 l6">
-                            <img class="responsive-img" src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-21.png" alt="">
+                            <img class="responsive-img" src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-21.png"
+                                alt="">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s6 l6">
-                            <img class="responsive-img" src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-22.png" alt="">
+                            <img class="responsive-img" src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-22.png"
+                                alt="">
                         </div>
                         <div class="col s6 l6">
-                            <img class="responsive-img" src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-23.png" alt="">
+                            <img class="responsive-img" src="https://k.nooncdn.com/cms/pages/20180910/3d7e90de8302dba602e655fe9d0551ab/ar_cat-module-23.png"
+                                alt="">
                         </div>
                     </div>
                 </div>
@@ -436,7 +471,8 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
                             <i class="activator material-icons left">more_vert</i>
-                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G
+                            </p>
                         </span>
                         <strong class="price-old"> 20 س.ر. </strong>
                         <strong class="price-new"> 80 س.ر.</strong>
@@ -463,7 +499,8 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
                             <i class="activator material-icons left">more_vert</i>
-                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G
+                            </p>
                         </span>
                         <strong class="price-old"> 20 س.ر. </strong>
                         <strong class="price-new"> 80 س.ر.</strong>
@@ -490,7 +527,8 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
                             <i class="activator material-icons left">more_vert</i>
-                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G
+                            </p>
                         </span>
                         <strong class="price-old"> 20 س.ر. </strong>
                         <strong class="price-new"> 80 س.ر.</strong>
@@ -517,7 +555,8 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
                             <i class="activator material-icons left">more_vert</i>
-                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G
+                            </p>
                         </span>
                         <strong class="price-old"> 20 س.ر. </strong>
                         <strong class="price-new"> 80 س.ر.</strong>
@@ -544,7 +583,8 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
                             <i class="activator material-icons left">more_vert</i>
-                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G
+                            </p>
                         </span>
                         <strong class="price-old"> 20 س.ر. </strong>
                         <strong class="price-new"> 80 س.ر.</strong>
@@ -571,7 +611,8 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
                             <i class="activator material-icons left">more_vert</i>
-                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G
+                            </p>
                         </span>
                         <strong class="price-old"> 20 س.ر. </strong>
                         <strong class="price-new"> 80 س.ر.</strong>
@@ -598,7 +639,8 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
                             <i class="activator material-icons left">more_vert</i>
-                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G
+                            </p>
                         </span>
                         <strong class="price-old"> 20 س.ر. </strong>
                         <strong class="price-new"> 80 س.ر.</strong>
@@ -625,7 +667,8 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
                             <i class="activator material-icons left">more_vert</i>
-                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G
+                            </p>
                         </span>
                         <strong class="price-old"> 20 س.ر. </strong>
                         <strong class="price-new"> 80 س.ر.</strong>
@@ -652,7 +695,8 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
                             <i class="activator material-icons left">more_vert</i>
-                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G
+                            </p>
                         </span>
                         <strong class="price-old"> 20 س.ر. </strong>
                         <strong class="price-new"> 80 س.ر.</strong>
@@ -679,7 +723,8 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
                             <i class="activator material-icons left">more_vert</i>
-                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G
+                            </p>
                         </span>
                         <strong class="price-old"> 20 س.ر. </strong>
                         <strong class="price-new"> 80 س.ر.</strong>
@@ -706,7 +751,8 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
                             <i class="activator material-icons left">more_vert</i>
-                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G
+                            </p>
                         </span>
                         <strong class="price-old"> 20 س.ر. </strong>
                         <strong class="price-new"> 80 س.ر.</strong>
@@ -733,7 +779,8 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">
                             <i class="activator material-icons left">more_vert</i>
-                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G </p>
+                            <p class="ellipsis1">آيفون 7 وبدون فيس تايم بلون أسود بذاكرة سعة 32 جيجابايت ومزود بخدمة 4G
+                            </p>
                         </span>
                         <strong class="price-old"> 20 س.ر. </strong>
                         <strong class="price-new"> 80 س.ر.</strong>
@@ -794,10 +841,14 @@
                     <div class="col l12 m12 s12">
                         <h5 class=""> تواصل معنا</h5>
                         <ul>
-                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating   waves-effect waves-light"><i class="fa fa-facebook"></i></a></li>
-                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating   waves-effect waves-light"><i class="fa fa-snapchat"></i></a></li>
-                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating  waves-effect waves-light"><i class="fa fa-instagram"></i></a></li>
-                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating   waves-effect waves-light"><i class="fa fa-twitter"></i></a></li>
+                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating   waves-effect waves-light"><i
+                                        class="fa fa-facebook"></i></a></li>
+                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating   waves-effect waves-light"><i
+                                        class="fa fa-snapchat"></i></a></li>
+                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating  waves-effect waves-light"><i
+                                        class="fa fa-instagram"></i></a></li>
+                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating   waves-effect waves-light"><i
+                                        class="fa fa-twitter"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -820,7 +871,6 @@
             </div>
         </footer>
         <!-- End Footer -->
-
     </div>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>

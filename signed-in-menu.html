@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title>قنة | Qonaa</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/rtl.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!--  Main Menu Navbar  -->
+    <nav class="main-menu">
+        <div class="nav-wrapper signed-in valign-wrapper">
+            <a href="#" data-target="mobile-view" class="sidenav-trigger mobile-nav"><i class="material-icons black-text">menu</i></a>
+            <a href="#!" class="brand-logo right"><img src="images/logo.png" alt="qonaa"></a>
+            <form class="search center-block">
+                <div class="input-field">
+                    <i id="search-back" class="fa fa-long-arrow-right" style="display: none"></i>
+                    <input id="search" type="search" placeholder="ما الذي تبحث عنه؟" required>
+                    <label class="label-icon" for="search"><i id="search-icon" class="material-icons">search</i></label>
+                </div>
+            </form>
+            <ul>
+                <div class="nav-wrapper no-padding">
+                    <ul class="account-wrapper left">
+                        <li class="account-box">
+                            <a class="account-dropdown hide-on-small-only" href="#!" data-target="account-dropdown">
+                                <span class="user-name">مرحباً شيخة</span>
+                                <span>حسابي</span>
+                                <i class="material-icons left">arrow_drop_down</i>
+                            </a>
+                        </li>
+                        <li class="wishlist-container hide-on-small-only">
+                            <a href="#">
+                                <span class="material-icons wishlist">favorite</span>
+                                <span class="badge red">12</span>
+                            </a>
+                        </li>
+                        <li class="cart-container">
+                            <a href="#">
+                                <span class="material-icons cart">shopping_cart</span>
+                                <span class="badge red">12</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+            <div class="overlay"></div>
+        </div>
+
+        <!-- Account Dropdown -->
+        <ul id="account-dropdown" class="dropdown-content">
+            <li class="user-links">
+                <a href=""><span>الطلبيات</span><i class="material-icons">assignment</i></a>
+                <a href=""><span>العناوين</span><i class="material-icons">assignment</i></a>
+                <a href=""><span>عمليات الدفع</span><i class="material-icons">assignment</i></a>
+                <a href=""><span>رصيدك بقنة</span><i class="material-icons">assignment</i></a>
+                <a href=""><span>الإرجاع</span><i class="material-icons">assignment</i></a>
+                <a href=""><span>الملف الشخصي</span><i class="material-icons">assignment</i></a>
+            </li>
+            <li class="divider"></li>
+            <li class="sign-out-cta">
+                <a class="center grey-text" href="#">تسجيل الخروج</a>
+            </li>
+        </ul>
+
+        <ul class="sidenav" id="mobile-view">
+            <li>
+                <div class="user-view">
+                    <span class="material-icons black-text sidenav-close">clear</span>
+                    <div class="brand-logo">
+                        <a href="#!" class="right"><img src="images/logo.png" alt="qonaa"></a>
+                    </div>
+                    <div class="account">
+                        <p class="title">مرحباً بكـ في قنة!</p>
+                    </div>
+                </div>
+                <div id="mobile-main-menu">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <i class="fa fa-home"></i>
+                                <span>الرئيسية</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="signin.html">
+                                <i class="fa fa-user"></i>
+                                <span>الحساب</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="signup.html">
+                                <span class="badge red">12</span>
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>عربة التسوق</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="badge red">12</span>
+                                <i class="fa fa-heart"></i>
+                                <span>قائمتي المفضلة</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li id="menu-divider">
+                <div class="divider"></div>
+            </li>
+            <li><a class="subheader">جميع الفئات</a></li>
+            <li>
+                <ul class="collapsible collapsible-accordion no-padding">
+                    <li>
+                        <a class="collapsible-header">الأزياء<i class="material-icons">arrow_drop_down</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#">الأحذية</a></li>
+                                <li><a href="#">أزياء رجالية</a></li>
+                                <li><a href="#">الساعات</a></li>
+                                <li><a href="#">إكسسوارات الأزياء</a></li>
+                                <li><a href="#">النظارات</a></li>
+                                <li><a href="#">حقائب يد للنساء</a></li>
+                                <li><a href="#">أزياء البنات</a></li>
+                                <li><a href="#">أزياء الأولاد</a></li>
+                                <li><a href="#">الأزياء النسائية</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="collapsible-header">الإلكترونيات<i class="material-icons">arrow_drop_down</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li class=""><a href="#" class="">أجهزة الكمبيوتر المحمولة</a></li>
+                                <li class=""><a href="#" class="">ألعاب الفيديو</a></li>
+                                <li class=""><a href="#" class="">التلفزيونات</a></li>
+                                <li class=""><a href="#" class="">أجهزة منزلية</a></li>
+                                <li class=""><a href="#" class="">سماعات</a></li>
+                                <li class=""><a href="#" class="">سماعات الرأس و سماعات الأذن</a></li>
+                                <li class=""><a href="#" class="">أجهزة الصوت/الفيديو</a></li>
+                                <li class=""><a href="#" class="">الساعات الذكية والإكسسوارات</a></li>
+                                <li class=""><a href="#" class="">كاميرات وتصوير وفيديو</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="collapsible-header">الموبايلات<i class="material-icons">arrow_drop_down</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li class=""><a href="#" class="">الموبايلات</a></li>
+                                <li class=""><a href="#" class="">أجهزة التابلت</a></li>
+                                <li class=""><a href="#" class="">الساعات الذكية</a></li>
+                                <li class=""><a href="#" class="">بور بانك</a></li>
+                                <li class=""><a href="#" class="">سماعات الموبايل</a></li>
+                                <li class=""><a href="#" class="">كابلات الشحن</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="collapsible-header">المنزل والمطبخ<i class="material-icons">arrow_drop_down</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li class=""><a href="#" class="">مستلزمات السرير</a></li>
+                                <li class=""><a href="#" class="">الحمامات</a></li>
+                                <li class=""><a href="#" class="">ديكورات المنازل</a></li>
+                                <li class=""><a href="#" class="">مطبخ وأدوات طعام</a></li>
+                                <li class=""><a href="#" class="">أجهزة منزلية</a></li>
+                                <li class=""><a href="#" class="">الأدوات وتحسين المنزل</a></li>
+                                <li class=""><a href="#" class="">الأثاث</a></li>
+                                <li class=""><a href="#" class="">تخزين وتنظيم منزلي</a></li>
+                                <li class=""><a href="#" class="">مستلزمات الحيوانات الأليفة</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#!">الجمال والعطور</a></li>
+                    <li><a class="red-text" href="#!">عروض</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>
