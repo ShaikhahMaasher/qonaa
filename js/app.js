@@ -98,10 +98,10 @@ $(".wish-shape").click(function (e) {
 });
 $(".add-to-cart").click(function (e) {
     if ($(this).children('.cart-shop').text() === 'add_shopping_cart') {
-        $(this).html('تمت الإضافة لعربة التسوق<i class="material-icons cart-shop">check</i>');
+        $(this).html('<i class="material-icons cart-shop">check</i>تمت الإضافة');
         // $('.wish-shape').addClass('red-text');
     } else {
-        $(this).html('<i class="material-icons cart-shop">add_shopping_cart</i>  أضف إلى عربة التسوق');
+        $(this).html('إضافة لعربة التسوق<i class="material-icons cart-shop">add_shopping_cart</i>');
         // $('.wish-shape').removeClass('red-text');
     }
 });
@@ -200,3 +200,14 @@ arrows: false,
 rtl: true,
 });
 /** End Single product image slider mobile view*/
+/** Category filters for desktop and tablet view */
+$('.dropdown-trigger').dropdown({coverTrigger:false});
+$('.datepicker').datepicker({isRTL:true});
+$('input:radio[name="group1"]').change(
+function(){
+    if ($(this).is(':checked')) {
+        var $text=$(this).next('span').text();
+    $(this).parents('.dropdown-conten-filter').prev('a').html(`<i class="material-icons">arrow_drop_down</i>${$text}`);
+}
+});
+/** End Category filters for desktop and tablet view */
