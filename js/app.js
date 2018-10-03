@@ -1,3 +1,6 @@
+var debugVal;
+var debugVal;
+
 /** COMPONENT INITIALIZATION */
 $(document).ready(function () {
     $('.sidenav').sidenav({
@@ -18,16 +21,26 @@ $(document).ready(function () {
         alignment: 'left',
         coverTrigger: false
     });
-
-    $(".collapsible").collapsible();
     $('.tabs').tabs();
+    $(".collapsible").collapsible();
+    $(".collapsible.expandable").collapsible({
+        accordion: false,
+        onCloseStart: function (e) {
+            e.firstElementChild.firstElementChild.classList = 'fa fa-angle-left';
+        },
+        onOpenStart(e) {
+            e.firstElementChild.firstElementChild.classList = 'fa fa-angle-down';
+        }
+    });
 });
 /** END OF COMPONENT INITIALIZATION */
-
+// FIXME: dropdown - overlay effect
 /** Dropdown Overlay */
 window.onclick = function (e) {
+    var displayVal = 'nothing!';
     if (!e.target.classList.contains('account-dropdown')) {
-        document.querySelector(".overlay").style.display = "none";
+        displayVal = 22;
+        // document.querySelector(".overlay").style.display = "none";
     }
 }
 
@@ -35,6 +48,7 @@ $(".account-dropdown").click(function () {
     $('.overlay').fadeToggle();
 });
 
+// FIXME: Category menu - overlay effect
 // window.onhover = function (e) {
 //     if (e.target.classList.contains('fashion-dropdown')) {
 //         document.querySelector(".overlay").style.display = "block";
@@ -119,8 +133,7 @@ $('.your-class').each(function () {
         rtl: true,
         slidesToShow: 7,
         slidesToScroll: 7,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 5,
@@ -128,21 +141,21 @@ $('.your-class').each(function () {
                     infinite: false,
                     dots: false
                 }
-             },
+            },
             {
                 breakpoint: 800,
                 settings: {
                     slidesToShow: 4.1,
                     slidesToScroll: 4
                 }
-             },
+            },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 3.1,
                     slidesToScroll: 3
                 }
-             },
+            },
             {
                 breakpoint: 480,
                 settings: {
@@ -152,7 +165,8 @@ $('.your-class').each(function () {
                     slidesToShow: 2.1,
                     slidesToScroll: 2
                 }
-             }]
+            }
+        ]
     });
 });
 
@@ -205,6 +219,7 @@ function addMobileSearch() {
     $('.main-menu .search .input-field').addClass('mobile-search-input');
     $('#search-back').style.display = "block";
 }
+
 function removeMobileSearch() {
     $('.main-menu .search .input-field').removeClass('mobile-search-input');
 }

@@ -12,7 +12,7 @@ html {
     left: 0;
 }
 
-.input-field > label:not(.label-icon).active {
+.input-field>label:not(.label-icon).active {
     -webkit-transform: translateY(-14px) scale(1.01);
     transform: translateY(-14px) scale(1.01);
 }
@@ -49,3 +49,21 @@ table td {
 #mobile-view .user-view .account p {
     text-align: left;
 }
+
+/* CATEGORY PAGE LAYOUT */
+.categ-sidebar-elm .multi-selection span {
+    padding-left: unset;
+    padding-right: 25px;
+}
+
+.categ-sidebar-elm .multi-selection span::before {
+    right: 0;
+    left: unset;
+}
+
+#categ-sidebar-price .price-wrapper .go-action {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+/* END OF CATEGORY PAGE LAYOUT */
