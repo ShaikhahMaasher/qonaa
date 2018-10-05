@@ -338,130 +338,308 @@
     <div id="product-category-container" class="page-wrapper">
         <div class="site-width-container">
             <div class="row">
-                <div class="col s12 m3 right">
-                    <div class="filters-panel">
-                        <ul class="collapsible expandable">
-                            <li class="active">
-                                <div class="collapsible-header"><i class="fa fa-angle-down"></i>الفئة</div>
-                                <div class="collapsible-body">
-                                    <ul class="categ-sidebar-elm">
-                                        <li>
-                                            <span class="count">(543)</span>
-                                            <span>الأزياء</span>
-                                        </li>
-                                        <li>
-                                            <span class="count">(93)</span>
-                                            <span>الإلكترونيات</span>
-                                        </li>
-                                        <li>
-                                            <span class="count">(743)</span>
-                                            <span>الموبايلات</span>
-                                        </li>
-                                        <li>
-                                            <span class="count">(43)</span>
-                                            <span>المنزل والمطبخ</span>
-                                        </li>
-                                        <li>
-                                            <span class="count">(54)</span>
-                                            <span>الجمال والعطور</span>
-                                        </li>
-                                    </ul>
+                <div id="categ-mobile-view" class="col s12 right hide-on-med-and-up">
+                    <div id="search-result">
+                        <span class="category-title">سماعات</span>
+                        <span class="result-text">تم العثور على 300 نتيجة/نتائج لبحثك</span>
+                    </div>
+                    <div id="categ-modals">
+                        <!-- Modal Trigger -->
+                        <a class="btn outline modal-trigger" href="#filter-modal">تصنيف حسب</a>
+                        <a class="btn outline modal-trigger" href="#sort-modal">ترتيب حسب</a>
+                        <!-- End of Modal Trigger -->
+
+                        <!-- Modal Structure -->
+                        <!-- Filter Modal -->
+                        <div id="product-category-container" class="page-wrapper">
+                            <div id="filter-modal" class="modal categ-mobile-modal modal-fixed-footer">
+                                <div class="modal-header">
+                                    <span>تصنيف حسب</span>
+                                    <span><i class="modal-close fa fa-close"></i></span>
                                 </div>
-                            </li>
-                            <li class="active">
-                                <div class="collapsible-header"><i class="fa fa-angle-down"></i>الماركة</div>
-                                <div class="collapsible-body">
-                                    <ul class="categ-sidebar-elm">
-                                        <li>
-                                            <span class="count">(543)</span>
-                                            <label class="multi-selection">
-                                                <input type="checkbox" />
-                                                <span>سامسونج</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <span class="count">(93)</span>
-                                            <label class="multi-selection">
-                                                <input type="checkbox" />
-                                                <span>أبل</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <span class="count">(743)</span>
-                                            <label class="multi-selection">
-                                                <input type="checkbox" />
-                                                <span>هواوي</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <span class="count">(54)</span>
-                                            <label class="multi-selection">
-                                                <input type="checkbox" />
-                                                <span>اتش بي</span>
-                                            </label>
-                                        </li>
-                                        <a class="limit-toggle" href="#">مشاهدة الكل</a>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li id="categ-sidebar-price" class="active">
-                                <div class="collapsible-header"><i class="fa fa-angle-down"></i>
-                                    <span>
-                                        السعر
-                                        <span class="currency-simple">(ر.س.)</span>
-                                    </span>
-                                </div>
-                                <div class="collapsible-body">
-                                    <div class="price-wrapper">
-                                        <input type="number" value="1" name="min" class="textInput">
-                                        <span class="between">إلى</span>
-                                        <input type="number" value="1" name="min" class="textInput">
-                                        <a class="go-action" href="#">بحث</a>
+                                <div class="modal-content">
+                                    <div class="filters-panel">
+                                        <ul class="collapsible expandable">
+                                            <li class="active level-1">
+                                                <div class="collapsible-header"><i class="fa fa-angle-down"></i>الفئة</div>
+                                                <div class="collapsible-body">
+                                                    <ul class="categ-sidebar-elm">
+                                                        <li>
+                                                            <span class="count">(543)</span>
+                                                            <span>الأزياء</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="count">(93)</span>
+                                                            <span>الإلكترونيات</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="count">(743)</span>
+                                                            <span>الموبايلات</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="count">(43)</span>
+                                                            <span>المنزل والمطبخ</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="count">(54)</span>
+                                                            <span>الجمال والعطور</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="level-1">
+                                                <div class="collapsible-header"><i class="fa fa-angle-left"></i>الماركة</div>
+                                                <div class="collapsible-body">
+                                                    <ul class="categ-sidebar-elm">
+                                                        <li>
+                                                            <span class="count">(543)</span>
+                                                            <label class="multi-selection">
+                                                                <input type="checkbox" />
+                                                                <span>سامسونج</span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <span class="count">(93)</span>
+                                                            <label class="multi-selection">
+                                                                <input type="checkbox" />
+                                                                <span>أبل</span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <span class="count">(743)</span>
+                                                            <label class="multi-selection">
+                                                                <input type="checkbox" />
+                                                                <span>هواوي</span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <span class="count">(54)</span>
+                                                            <label class="multi-selection">
+                                                                <input type="checkbox" />
+                                                                <span>اتش بي</span>
+                                                            </label>
+                                                        </li>
+                                                        <a class="limit-toggle" href="#">مشاهدة الكل</a>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li id="categ-sidebar-price" class="level-1">
+                                                <div class="collapsible-header"><i class="fa fa-angle-left"></i>
+                                                    <span>
+                                                        السعر
+                                                        <span class="currency-simple">(ر.س.)</span>
+                                                    </span>
+                                                </div>
+                                                <div class="collapsible-body">
+                                                    <div class="price-wrapper">
+                                                        <input type="number" value="1" name="min" class="textInput">
+                                                        <span class="between">إلى</span>
+                                                        <input type="number" value="1" name="min" class="textInput">
+                                                        <a class="go-action" href="#">بحث</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="level-1">
+                                                <div class="collapsible-header"><i class="fa fa-angle-left"></i>عائلة
+                                                    اللون</div>
+                                                <div class="collapsible-body">
+                                                    <ul class="categ-sidebar-elm">
+                                                        <li>
+                                                            <span class="count">(743)</span>
+                                                            <label class="multi-selection">
+                                                                <input type="checkbox" />
+                                                                <span>متعدد الألوان</span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <span class="count">(33)</span>
+                                                            <label class="multi-selection">
+                                                                <input type="checkbox" />
+                                                                <span>أسود</span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <span class="count">(5)</span>
+                                                            <label class="multi-selection">
+                                                                <input type="checkbox" />
+                                                                <span>أزرق</span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <span class="count">(13)</span>
+                                                            <label class="multi-selection">
+                                                                <input type="checkbox" />
+                                                                <span>أبيض</span>
+                                                            </label>
+                                                        </li>
+                                                        <a class="limit-toggle" href="#">مشاهدة الكل</a>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="active">
-                                <div class="collapsible-header"><i class="fa fa-angle-down"></i>عائلة اللون</div>
-                                <div class="collapsible-body">
-                                    <ul class="categ-sidebar-elm">
-                                        <li>
-                                            <span class="count">(743)</span>
-                                            <label class="multi-selection">
-                                                <input type="checkbox" />
-                                                <span>متعدد الألوان</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <span class="count">(33)</span>
-                                            <label class="multi-selection">
-                                                <input type="checkbox" />
-                                                <span>أسود</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <span class="count">(5)</span>
-                                            <label class="multi-selection">
-                                                <input type="checkbox" />
-                                                <span>أزرق</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <span class="count">(13)</span>
-                                            <label class="multi-selection">
-                                                <input type="checkbox" />
-                                                <span>أبيض</span>
-                                            </label>
-                                        </li>
-                                        <a class="limit-toggle" href="#">مشاهدة الكل</a>
-                                    </ul>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn outline">إعادة تعيين</a>
+                                    <a href="#" class="btn">إضافة</a>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
+                        <!-- Sort by Modal -->
+                        <div id="product-category-container" class="page-wrapper">
+                            <div id="sort-modal" class="modal categ-mobile-modal">
+                                <div class="modal-header">
+                                    <span>ترتيب حسب</span>
+                                    <span><i class="modal-close fa fa-close"></i></span>
+                                </div>
+                                <div class="modal-content top-filter">
+                                    <form action="#">
+                                        <p>
+                                            <label>
+                                                <input name="group1" class="with-gap" type="radio" checked />
+                                                <span>الأكثر رواجا</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap" name="group1" type="radio" />
+                                                <span>السعر من الأكثر للأقل</span>
+                                            </label>
+                                        </p>
+                                        <label>
+                                            <input class="with-gap" name="group1" type="radio" />
+                                            <span> السعر من الأقل للأكثر</span>
+                                        </label>
+                                        <p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Modal Structure -->
                     </div>
                 </div>
-                <div class="col s12 m9">
+                <div class="filters-panel col m3 right hide-on-small-only">
+                    <ul class="collapsible expandable">
+                        <li class="active">
+                            <div class="collapsible-header"><i class="fa fa-angle-down"></i>الفئة</div>
+                            <div class="collapsible-body">
+                                <ul class="categ-sidebar-elm">
+                                    <li>
+                                        <span class="count">(543)</span>
+                                        <span>الأزياء</span>
+                                    </li>
+                                    <li>
+                                        <span class="count">(93)</span>
+                                        <span>الإلكترونيات</span>
+                                    </li>
+                                    <li>
+                                        <span class="count">(743)</span>
+                                        <span>الموبايلات</span>
+                                    </li>
+                                    <li>
+                                        <span class="count">(43)</span>
+                                        <span>المنزل والمطبخ</span>
+                                    </li>
+                                    <li>
+                                        <span class="count">(54)</span>
+                                        <span>الجمال والعطور</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="active">
+                            <div class="collapsible-header"><i class="fa fa-angle-down"></i>الماركة</div>
+                            <div class="collapsible-body">
+                                <ul class="categ-sidebar-elm">
+                                    <li>
+                                        <span class="count">(543)</span>
+                                        <label class="multi-selection">
+                                            <input type="checkbox" />
+                                            <span>سامسونج</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <span class="count">(93)</span>
+                                        <label class="multi-selection">
+                                            <input type="checkbox" />
+                                            <span>أبل</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <span class="count">(743)</span>
+                                        <label class="multi-selection">
+                                            <input type="checkbox" />
+                                            <span>هواوي</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <span class="count">(54)</span>
+                                        <label class="multi-selection">
+                                            <input type="checkbox" />
+                                            <span>اتش بي</span>
+                                        </label>
+                                    </li>
+                                    <a class="limit-toggle" href="#">مشاهدة الكل</a>
+                                </ul>
+                            </div>
+                        </li>
+                        <li id="categ-sidebar-price" class="active">
+                            <div class="collapsible-header"><i class="fa fa-angle-down"></i>
+                                <span>
+                                    السعر
+                                    <span class="currency-simple">(ر.س.)</span>
+                                </span>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="price-wrapper">
+                                    <input type="number" value="1" name="min" class="textInput">
+                                    <span class="between">إلى</span>
+                                    <input type="number" value="1" name="min" class="textInput">
+                                    <a class="go-action" href="#">بحث</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="active">
+                            <div class="collapsible-header"><i class="fa fa-angle-down"></i>عائلة اللون</div>
+                            <div class="collapsible-body">
+                                <ul class="categ-sidebar-elm">
+                                    <li>
+                                        <span class="count">(743)</span>
+                                        <label class="multi-selection">
+                                            <input type="checkbox" />
+                                            <span>متعدد الألوان</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <span class="count">(33)</span>
+                                        <label class="multi-selection">
+                                            <input type="checkbox" />
+                                            <span>أسود</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <span class="count">(5)</span>
+                                        <label class="multi-selection">
+                                            <input type="checkbox" />
+                                            <span>أزرق</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <span class="count">(13)</span>
+                                        <label class="multi-selection">
+                                            <input type="checkbox" />
+                                            <span>أبيض</span>
+                                        </label>
+                                    </li>
+                                    <a class="limit-toggle" href="#">مشاهدة الكل</a>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="product-list-container" class="col s12 m9">
                     <div class="row product-list-wrapper">
-                        <div class="row top-filter">
+                        <div class="row top-filter hide-on-small-only">
                             <div class="filter-options">
                                 <label class="filter-label">عرض</label>
                                 <a class='dropdown-trigger btn-flat btn btn-filter left' href='#' data-target='dropdown2'><i

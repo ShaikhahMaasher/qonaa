@@ -32,6 +32,12 @@ $(document).ready(function () {
             e.firstElementChild.firstElementChild.classList = 'fa fa-angle-down';
         }
     });
+
+    $(document).ready(function () {
+        $('.modal').modal({
+            preventScrolling: true
+        });
+    });
 });
 /** END OF COMPONENT INITIALIZATION */
 // FIXME: dropdown - overlay effect
