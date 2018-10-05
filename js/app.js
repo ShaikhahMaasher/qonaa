@@ -185,6 +185,13 @@ $(window).resize(function () {
     }
 });
 /** End Products Slider for Gategories, best selling*/
+$(".adding-to-cart-btn").click(function (e) {
+    if ($(this).children('.btn').text() === 'إضافة لعربة التسوق') {
+        $(this).children('.btn').html(' <i class="fa fa-check"></i> تمت الإضافة');
+    } else {
+        $(this).children('.btn').html('إضافة لعربة التسوق');
+    }
+});
 /** Single product image slider desktop view*/
 $('.single-product-slider').slick({
     slidesToShow: 1,
@@ -219,7 +226,6 @@ $('.single-product-slider-mobile').slick({
     rtl: true,
 });
 /** End Single product image slider mobile view*/
-
 /** STYLE TOP MENU SEARCH */
 function addMobileSearch() {
     $('.main-menu .search .input-field').addClass('mobile-search-input');
@@ -248,3 +254,14 @@ $('input:radio[name="group1"]').change(
         }
     });
 /** End Category filters for desktop and tablet view */
+/** image zoom */
+var zoomOptions = {zoomType: "inner"};
+$(".single-product-slider .slick-current img").elevateZoom(zoomOptions);
+$(".single-product-slider").on("beforeChange", function(event, slick,currentSlide,nextSlide) {
+    $.removeData(currentSlide, "elevateZoom");
+    $(".zoomContainer").remove();
+});
+$(".single-product-slider").on("afterChange", function() {
+    $(".single-product-slider .slick-current img").elevateZoom(zoomOptions);
+});
+/** End image zoom */

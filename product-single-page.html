@@ -1223,61 +1223,7 @@
     <script type="text/javascript" src="zoom-master/jquery.zoom.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <!-- <script type="text/javascript" src="zoom-master/jquery.zoom.min.js"></script> -->
     <script type="text/javascript" src="elevatezoom-master/jquery.elevatezoom.js"></script>
-
     <script type="text/javascript" src="js/app.js"></script>
-    <!-- <script type="text/javascript">
-
-    //   img_zoom.elevateZoom({
-    //  zoomType: "inner"
-    //    });
-    //    img_zoom.data().elevateZoom.zoomContainer.remove();
-    //    $.removeData(img_zoom, 'elevateZoom');
-       
-        
-    // $(document).ready(function(){
-    //     $('#zoom_05').zoom();
-    // });
-    // $(".zoom_05").bind("click", function(e) {  
-    // var ez =   $('.zoom_05').data('elevateZoom');	
-    // $.fancybox(ez.getGalleryList());
-//   return false;
-// });
-// $.fn.myElevateZoom = function () {
-//   $('.zoom_05').removeData('elevateZoom');
-//   $('.zoomWrapper .zoom_05').unwrap();
-//   $('.zoomContainer').remove();
-
-//   $(this).elevateZoom({
-//     zoomType: "inner"
-//   });
-// };
-// $('.zoom_05').myElevateZoom();
-   var img_zoom = $('.zoom_05');
-   img_zoom.each(function(){
-    var src_img=$(this).attr('src');
-    console.log(src_img);
-    $(this).hover( function(){
-    $(this).removeData('elevateZoom');
-    $('.zoomWrapper .zoom_05').unwrap();
-    $('.zoomContainer').remove();
-    $(this).data('zoom-image',src_img);
-    $(this).elevateZoom({zoomType: "inner"});
-});});
-    </script>  -->
-    <script>
-        $(".adding-to-cart-btn").click(function (e) {
-            if ($(this).children('.btn').text() === 'إضافة لعربة التسوق') {
-                $(this).children('.btn').html(' <i class="fa fa-check"></i> تمت الإضافة');
-                // $('.wish-shape').addClass('red-text');
-            } else {
-                $(this).children('.btn').html('إضافة لعربة التسوق');
-                // $('.wish-shape').removeClass('red-text');
-            }
-        });
-    </script>
-
 </body>
-
 </html>
