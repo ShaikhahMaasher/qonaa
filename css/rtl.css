@@ -67,3 +67,11 @@ table td {
 }
 
 /* END OF CATEGORY PAGE LAYOUT */
+
+/* CART PAGE */
+.coupon-row img {
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+/* END OF CART PAGE */
