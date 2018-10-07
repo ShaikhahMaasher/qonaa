@@ -245,15 +245,18 @@ $('input:radio[name="group1"]').change(
             $(this).parents('.dropdown-conten-filter').prev('a').html(`<i class="material-icons">arrow_drop_down</i>${$text}`);
         }
     });
+
 /** End Category filters for desktop and tablet view */
 /** image zoom */
-var zoomOptions = {zoomType: "inner"};
+var zoomOptions = {
+    zoomType: "inner"
+};
 $(".single-product-slider .slick-current img").elevateZoom(zoomOptions);
-$(".single-product-slider").on("beforeChange", function(event, slick,currentSlide,nextSlide) {
+$(".single-product-slider").on("beforeChange", function (event, slick, currentSlide, nextSlide) {
     $.removeData(currentSlide, "elevateZoom");
     $(".zoomContainer").remove();
 });
-$(".single-product-slider").on("afterChange", function() {
+$(".single-product-slider").on("afterChange", function () {
     $(".single-product-slider .slick-current img").elevateZoom(zoomOptions);
 });
 /** End image zoom */

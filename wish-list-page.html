@@ -334,21 +334,22 @@
     <!-- End of Categories Menu -->
      <div id="wish-cart-container"class="page-wrapper">
          <div class="site-width-container">
+            <div class="row" style="margin-bottom:0px;">
+                    <header>
+                        <p class="heading">
+                            <span>
+                                <strong>عربة التسوق</strong>
+                            </span>
+                            <span class="counter">
+                                2 منتج 
+                            </span>
+                        </p>
+                    </header>
+            </div>
              <div class="row">
-                <div class="col m8 s12 right">
+                 <!--cart and wish list products  -->
+                <div id="cart-wish-list-container" class="col l9 m8 s12 right">
                     <!--Cart section  -->
-                    <div class="row" style="margin-bottom:0px;">
-                        <header>
-                            <p class="heading">
-                                <span>
-                                    <strong>عربة التسوق</strong>
-                                </span>
-                                <span class="counter">
-                                    2 منتج 
-                                </span>
-                            </p>
-                        </header>
-                    </div>
                     <div class="row cart-item-list">
                         <div class="col m12 s12 cart-item">
                             <div class="core-details-container">
@@ -524,16 +525,61 @@
                                 </div>
                     </div>
                     <!--End Wish list  -->
-                    <!-- button of contune -->
-                    <div class="support-info">
-                        <button class="btn-flat" type="submit" name="action">
-                               متابعة التسوق 
+                </div>
+                 <!--cart details info  -->
+                <div id="cart-details-container" class="col s12 m4 l3">
+                    <div class="invoice">
+                        <div class="coupon">
+                            <span class="coupon-input">
+                                كوبون&colon;
+                                <strong>خمسون</strong>
+                            </span>
+                            <button class="btn btn-flat">إزالة</button>
+                        </div>
+                        <div class="invoice-summary">
+                            <p class="title">ملخص الطلبية</p>
+                            <div class="invoice-row">
+                                <span class="heading">المجموع الفرعي</span>
+                                <span class="value">7346.70 ر.س.‏</span>
+                            </div>
+                            <div class="invoice-row">
+                                <span class="heading">الشحن</span>
+                                <span class="value">مجاني</span>
+                            </div>
+                            <div class="invoice-row">
+                                <span class="heading">الخصم</span>
+                                <span class="value">- 50.00 ر.س.‏</span>
+                            </div>
+                            <div class="coupon-row invoice-row">
+                                <img src="https://k.nooncdn.com/s/app/2018/com-www-bigalog/static/7c24d5b4-8dc7-43b3-81e5-b0a362522cd7/images/discount-coupon.png"
+                                    alt="مستعمل" class="jsx-3414296853">
+                                خصم 50
+                            </div>
+                            <div class="total-row invoice-row">
+                                <span class="heading">المجموع
+                                    <span class="vat-note">
+                                        (شاملاً ضريبة القيمة المضافة)
+                                    </span>
+                                </span>
+                                <span class="value discount-value">7296.70 ر.س.‏</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-cta-wrapper">
+                        <button class="btn">
+                            <span>7296.70 ر.س.‏</span>
+                            تابع للدفع الآمن
                         </button>
                     </div>
                 </div>
-                <div class="col m4 s12">
-                </div>
             </div>
+            <!-- button for countione shoping -->
+            <div class="row support-info">
+                    <button class="btn-flat" type="submit" name="action">
+                            متابعة التسوق 
+                    </button>
+            </div>
+             <!-- slider of Customers Also Purchased -->
             <div style="margin-bottom:0px !important;">
                 <h4 class="related-product-title">الذين اشتروا هذا المنتج، قاموا بشراء هذه المنتجات أيضاً</h4>
             </div>
@@ -885,14 +931,13 @@
                         <i class="material-icons left">keyboard_arrow_left</i> </span>
                 </div>
             </div>
-                
          </div>
      </div>
     <!-- Main Content -->
-    
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript" src="elevatezoom-master/jquery.elevatezoom.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     </body>
     </html>
