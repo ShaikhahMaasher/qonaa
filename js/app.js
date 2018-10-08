@@ -169,14 +169,6 @@ $('.your-class').each(function () {
     });
 });
 
-/** Remove contatiner when small device */
-$(window).resize(function () {
-    if ($(window).width() <= 767) {
-        $('.products-slider').removeClass('categories-wrapper');
-    } else {
-        $('.products-slider').addClass('categories-wrapper');
-    }
-});
 /** End Products Slider for Gategories, best selling*/
 $(".adding-to-cart-btn").click(function (e) {
     if ($(this).children('.btn').text() === 'إضافة لعربة التسوق') {
