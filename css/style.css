@@ -296,7 +296,21 @@ nav .brand-logo.right {
     padding-left: 15px;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 992px) {
+    .page-wrapper {
+        margin-top: 0 !important;
+    }
+
+    .site-header {
+        position: inherit !important;
+    }
+
+    .sidenav-overlay {
+        z-index: 4;
+    }
+}
+
+@media only screen and (min-width: 993px) {
 
     .site-width-container {
         padding: 0 45px;
@@ -315,6 +329,10 @@ nav .brand-logo.right {
     .row .product-list .col.l2 {
         width: 25%;
     }
+
+    /* #cart-details-container {
+        width: 28%;
+    } */
 }
 
 .nav-wrapper .mobile-nav {
@@ -326,7 +344,14 @@ nav .brand-logo.right {
     height: 36px;
 }
 
-.sidenav-overlay,
+.site-header {
+    opacity: 1;
+    z-index: 60;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -334,8 +359,9 @@ nav .brand-logo.right {
     right: 0;
     opacity: 1;
     height: 120vh;
+    margin-top: 108px;
     background-color: rgba(0, 0, 0, 0.3);
-    z-index: -1;
+    z-index: 4;
     display: none;
 }
 
@@ -529,6 +555,10 @@ textarea {
     overflow-x: hidden;
 }
 
+.page-wrapper {
+    margin-top: 108px;
+}
+
 .page-container {
     padding-top: 20px;
 }
@@ -683,6 +713,10 @@ li.account-box .account-dropdown .user-name {
     padding: 0 16px;
 }
 
+#mobile-view .brand-logo a {
+    padding: 0;
+}
+
 .sidenav .user-view {
     display: flex;
     padding: 0 15px;
@@ -694,6 +728,7 @@ li.account-box .account-dropdown .user-name {
 .sidenav .user-view .sidenav-close {
     flex: 0 0 10%;
     align-self: center;
+    cursor: pointer;
 }
 
 .sidenav .user-view .brand-logo {
@@ -703,7 +738,7 @@ li.account-box .account-dropdown .user-name {
     left: auto;
     -webkit-transform: none;
     transform: none;
-    padding-right: 10px;
+    margin-right: 25px;
 }
 
 .mobile-welcome {
@@ -786,13 +821,12 @@ li.account-box .account-dropdown .user-name {
     color: #a8dadc;
     width: 27px;
     height: 44px;
-    z-index: 10;
+    z-index: 2;
     cursor: pointer;
     background-size: 27px 44px;
     background-position: center center;
     background-repeat: no-repeat;
     display: block;
-    /* color: grey;*/
 }
 
 .slick-arrow:hover {
@@ -1222,6 +1256,7 @@ li.account-box .account-dropdown .user-name {
         left: 0;
         z-index: 999;
         width: 100%;
+        box-shadow: 4px 1px 4px 0 hsla(0, 0%, 0%, 0.25);
     }
 
     .main-menu .search .mobile-search-input #search {
@@ -1283,7 +1318,7 @@ li.account-box .account-dropdown .user-name {
         width: 100%;
         background-color: #fff;
         box-shadow: 4px 1px 4px 0 hsla(0, 0%, 0%, 0.25);
-        z-index: 999;
+        z-index: 2;
         margin: 0 !important;
     }
 

@@ -12,7 +12,13 @@ $(document).ready(function () {
     $(".account-dropdown").dropdown({
         coverTrigger: false,
         closeOnClick: false,
-        constrainWidth: false
+        constrainWidth: false,
+        onOpenStart: () => {
+            $('.overlay').show();
+        },
+        onCloseStart: () => {
+            $('.overlay').hide();
+        }
     });
 
     $(".fashion-dropdown, .elctronic-dropdown, .mobiles-dropdown, .home-and-kitchen-dropdown").dropdown({
@@ -21,6 +27,7 @@ $(document).ready(function () {
         alignment: 'left',
         coverTrigger: false
     });
+
     $('.tabs').tabs();
     $(".collapsible").collapsible();
     $(".collapsible.expandable").collapsible({
@@ -40,46 +47,32 @@ $(document).ready(function () {
     });
 });
 /** END OF COMPONENT INITIALIZATION */
-// FIXME: dropdown - overlay effect
+
 /** Dropdown Overlay */
-window.onclick = function (e) {
-    var displayVal = 'nothing!';
-    if (!e.target.classList.contains('account-dropdown')) {
-        displayVal = 22;
-        // document.querySelector(".overlay").style.display = "none";
-    }
-}
-
-$(".account-dropdown").click(function () {
-    $('.overlay').fadeToggle();
-});
-
-// FIXME: Category menu - overlay effect
-// window.onhover = function (e) {
-//     if (e.target.classList.contains('fashion-dropdown')) {
+// window.onclick = function (e) {
+//     let targetClass = e.target.classList;
+//     if (targetClass.contains('account-box')) {
 //         document.querySelector(".overlay").style.display = "block";
+//     } else {
+//         document.querySelector(".overlay").style.display = "none";
 //     }
 // }
+
+// $('.account-box').on('click', () => {
+//     document.querySelector(".overlay").style.display = "block";
+// });
+
+// $(".account-box").click(() => {
+//     $('.overlay').fadeToggle();
+// });
+
+
 /** END OF Dropdown Overlay */
 
 /** OVERLAY EFFECT ON CATEGORIES MENU */
-window.onmouseout = function (e) {
-    if (!e.target.classList.contains('mega-menu')) {
-        document.querySelector(".overlay").style.display = "none";
-    }
-}
-
-//
-// var eIs;
-//var parentElm;
-// $(".mega-menu").hover(function (e) {
-//     eIs = e;
-//     document.querySelector(".overlay").style.display = "block";
-//     parentElm = e.target.parentElement;
-//     if(parentElm.classList.contains('mega-menu') || parentElm.parentElement.classList.contains('mega-menu')) {
-//              document.querySelector(".overlay").style.display = "block";
-//     }
-// });
+$('.mega-menu').hover(e => {
+    $('.overlay').toggle();
+});
 /** END OVERLAY EFFECT ON CATEGORIES MENU */
 
 /** RATING STARS */
