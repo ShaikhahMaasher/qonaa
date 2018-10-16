@@ -260,3 +260,29 @@ $(".single-product-slider").on("afterChange", function () {
     $(".single-product-slider .slick-current img").elevateZoom(zoomOptions);
 });
 /** End image zoom */
+/** Payment page*/    
+$('.payment-options .credit-card,.switch-payment-method').click(function(){
+    $('.payment-options .credit-card').addClass( 'selected' );
+        $('.payment-options .cash-on-delivery').removeClass( 'selected' );
+        $('.payment-method-wrapper .form-container').show();
+        $('.payment-method-wrapper .cash-on-dilvery-container').hide();
+        $('.cod-price').hide();
+
+});
+$('.payment-options .cash-on-delivery').click(function(){
+        $(this).addClass( 'selected' );
+        $('.payment-options .credit-card').removeClass( 'selected' );
+        $('.payment-method-wrapper .form-container').hide();
+        $('.payment-method-wrapper .cash-on-dilvery-container').show();
+        $('.cod-price').show();
+});
+$('.shipment-text-container input').click(function(){
+   if($('.shipment-text-container .filled-in').is(':checked')){
+       $('.shipment-text-container span').text('لتوصيل المنتجات بمجرد الانتهاء من تحضيرها، يمكنك إلغاء تحديد المربع.').css('font-weight','bold');
+   }
+   else{
+       $('.shipment-text-container span').text('توصيل المنتجات في أقل عدد ممكن من الشحنات.').css('font-weight','normal');;
+   }
+
+});
+/**End payment page*/
