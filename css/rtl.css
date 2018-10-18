@@ -51,12 +51,12 @@ table td {
 }
 
 /* CATEGORY PAGE LAYOUT */
-.categ-sidebar-elm .multi-selection span {
+.categ-sidebar-elm .multi-selection span,.shipment-text-container .select-box span {
     padding-left: unset;
     padding-right: 25px;
 }
 
-.categ-sidebar-elm .multi-selection span::before {
+.categ-sidebar-elm .multi-selection span::before,.shipment-text-container .select-box span::after{
     right: 0;
     left: unset;
 }
@@ -73,6 +73,12 @@ table td {
     margin-left: 5px;
     margin-right: unset;
 }
+.shipment-text-container .select-box span::before{
+    right: 10px;
+    left: unset;
+}
+ 
+
 
 /* END OF CART PAGE */
 
