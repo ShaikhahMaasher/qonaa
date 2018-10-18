@@ -75,3 +75,51 @@ table td {
 }
 
 /* END OF CART PAGE */
+
+/* CHECKOUT PAGE */
+html[dir="rtl"] .address-container .address-row .phone-number {
+    direction: ltr;
+}
+
+.back-cta i {
+    margin-left: 8px;
+    margin-right: 0px;
+}
+
+.input-field>label {
+    right: 0;
+    left: auto;
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after,
+[type="radio"]:not(:checked)+span:before,
+[type="radio"]:not(:checked)+span:after {
+    right: 5px;
+}
+
+[type="radio"]:not(:checked)+span,
+[type="radio"]:checked+span {
+    padding-left: 0px;
+    padding-right: 35px;
+}
+
+/* END OF CHECKOUT PAGE */
+
+.block-text-4l {
+    margin-left: -0.8em;
+    padding-left: 0.8em;
+    margin-right: unset;
+    padding-right: unset;
+}
+
+.block-text-4l:before {
+    left: 0;
+    right: unset;
+}
+
+.block-text-4l:after {
+    left: 0;
+    right: unset;
+}

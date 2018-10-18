@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="../css/rtl.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="site-header">
+        <!--  Main Menu Navbar  -->
+        <nav class="main-menu">
+            <div class="nav-wrapper signed-in valign-wrapper">
+                <a href="#" data-target="mobile-view" class="sidenav-trigger mobile-nav"><i class="material-icons black-text">menu</i></a>
+                <a href="#!" class="brand-logo right"><img src="../images/logo.png" alt="qonaa"></a>
+                <form class="search center-block">
+                    <div class="input-field">
+                        <i id="search-back" class="fa fa-long-arrow-right" style="display: none"></i>
+                        <input id="search" type="search" placeholder="ما الذي تبحث عنه؟" required>
+                        <label class="label-icon" for="search"><i id="search-icon" class="material-icons">search</i></label>
+                    </div>
+                </form>
+                <ul>
+                    <div class="nav-wrapper no-padding">
+                        <ul class="account-wrapper left">
+                            <li class="account-box">
+                                <a class="account-dropdown hide-on-small-only" href="#!" data-target="account-dropdown">
+                                    <span class="user-name">مرحباً شيخة</span>
+                                    <span>حسابي</span>
+                                    <i class="material-icons left">arrow_drop_down</i>
+                                </a>
+                            </li>
+                            <li class="wishlist-container hide-on-small-only">
+                                <a href="#">
+                                    <span class="material-icons wishlist">favorite</span>
+                                    <span class="badge red">12</span>
+                                </a>
+                            </li>
+                            <li class="cart-container">
+                                <a href="#">
+                                    <span class="material-icons cart">shopping_cart</span>
+                                    <span class="badge red">12</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+
+            <!-- Account Dropdown -->
+            <ul id="account-dropdown" class="dropdown-content">
+                <li class="user-links">
+                    <a href=""><span>الطلبيات</span><i class="material-icons">assignment</i></a>
+                    <a href=""><span>العناوين</span><i class="material-icons">assignment</i></a>
+                    <a href=""><span>عمليات الدفع</span><i class="material-icons">assignment</i></a>
+                    <a href=""><span>رصيدك بقنة</span><i class="material-icons">assignment</i></a>
+                    <a href=""><span>الإرجاع</span><i class="material-icons">assignment</i></a>
+                    <a href=""><span>الملف الشخصي</span><i class="material-icons">assignment</i></a>
+                </li>
+                <li class="divider"></li>
+                <li class="sign-out-cta">
+                    <a class="center grey-text" href="#">تسجيل الخروج</a>
+                </li>
+            </ul>
+
+            <ul class="sidenav" id="mobile-view">
+                <li>
+                    <div class="user-view">
+                        <span class="material-icons black-text sidenav-close">clear</span>
+                        <div class="brand-logo">
+                            <a href="#!" class="right"><img src="../images/logo.png" alt="qonaa"></a>
+                        </div>
+                        <div class="account">
+                            <p class="title">مرحباً بكـ في قنة!</p>
+                        </div>
+                    </div>
+                    <div id="mobile-main-menu">
+                        <ul>
+                            <li>
+                                <a href="index.html">
+                                    <i class="fa fa-home"></i>
+                                    <span>الرئيسية</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="signin.html">
+                                    <i class="fa fa-user"></i>
+                                    <span>الحساب</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="signup.html">
+                                    <span class="badge red">12</span>
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span>عربة التسوق</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="badge red">12</span>
+                                    <i class="fa fa-heart"></i>
+                                    <span>قائمتي المفضلة</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="menu-divider">
+                    <div class="divider"></div>
+                </li>
+                <li><a class="subheader">جميع الفئات</a></li>
+                <li>
+                    <ul class="collapsible collapsible-accordion no-padding">
+                        <li>
+                            <a class="collapsible-header">الأزياء<i class="material-icons">arrow_drop_down</i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="#">الأزياء النسائية</a></li>
+                                    <li><a href="#">الأحذية</a></li>
+                                    <li><a href="#">أزياء رجالية</a></li>
+                                    <li><a href="#">الساعات</a></li>
+                                    <li><a href="#">إكسسوارات الأزياء</a></li>
+                                    <li><a href="#">النظارات</a></li>
+                                    <li><a href="#">حقائب يد للنساء</a></li>
+                                    <li><a href="#">أزياء البنات</a></li>
+                                    <li><a href="#">أزياء الأولاد</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="collapsible-header">الإلكترونيات<i class="material-icons">arrow_drop_down</i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li class=""><a href="#" class="">أجهزة الكمبيوتر المحمولة</a></li>
+                                    <li class=""><a href="#" class="">ألعاب الفيديو</a></li>
+                                    <li class=""><a href="#" class="">التلفزيونات</a></li>
+                                    <li class=""><a href="#" class="">أجهزة منزلية</a></li>
+                                    <li class=""><a href="#" class="">سماعات</a></li>
+                                    <li class=""><a href="#" class="">سماعات الرأس و سماعات الأذن</a></li>
+                                    <li class=""><a href="#" class="">أجهزة الصوت/الفيديو</a></li>
+                                    <li class=""><a href="#" class="">الساعات الذكية والإكسسوارات</a></li>
+                                    <li class=""><a href="#" class="">كاميرات وتصوير وفيديو</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="collapsible-header">الموبايلات<i class="material-icons">arrow_drop_down</i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li class=""><a href="#" class="">الموبايلات</a></li>
+                                    <li class=""><a href="#" class="">أجهزة التابلت</a></li>
+                                    <li class=""><a href="#" class="">الساعات الذكية</a></li>
+                                    <li class=""><a href="#" class="">بور بانك</a></li>
+                                    <li class=""><a href="#" class="">سماعات الموبايل</a></li>
+                                    <li class=""><a href="#" class="">كابلات الشحن</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="collapsible-header">المنزل والمطبخ<i class="material-icons">arrow_drop_down</i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li class=""><a href="#" class="">مستلزمات السرير</a></li>
+                                    <li class=""><a href="#" class="">الحمامات</a></li>
+                                    <li class=""><a href="#" class="">ديكورات المنازل</a></li>
+                                    <li class=""><a href="#" class="">مطبخ وأدوات طعام</a></li>
+                                    <li class=""><a href="#" class="">أجهزة منزلية</a></li>
+                                    <li class=""><a href="#" class="">الأدوات وتحسين المنزل</a></li>
+                                    <li class=""><a href="#" class="">الأثاث</a></li>
+                                    <li class=""><a href="#" class="">تخزين وتنظيم منزلي</a></li>
+                                    <li class=""><a href="#" class="">مستلزمات الحيوانات الأليفة</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#!">الجمال والعطور</a></li>
+                        <li><a class="red-text" href="#!">عروض</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Categories Menu -->
+        <nav class="second-menu hide-on-med-and-down">
+            <div class="nav-wrapper valign-wrapper">
+                <ul>
+                    <li><a class="red-text" href="#!">عروض</a></li>
+                    <li><a href="#!">الجمال والعطور</a></li>
+                    <li class="mega-menu">
+                        <a class="home-and-kitchen-dropdown" href="#!" data-target="home-and-kitchen-dropdown">المنزل
+                            والمطبخ</a>
+                        <div id="home-and-kitchen-dropdown" class="dropdown-content">
+                            <div class="contentWrapper">
+                                <div class="categoriesColumn">
+                                    <p class="title">الفئات</p>
+                                    <ul class="subCategoriesList right">
+                                        <li class=""><a href="#" class="">مستلزمات السرير</a></li>
+                                        <li class=""><a href="#" class="">الحمامات</a></li>
+                                        <li class=""><a href="#" class="">ديكورات المنازل</a></li>
+                                        <li class=""><a href="#" class="">مطبخ وأدوات طعام</a></li>
+                                        <li class=""><a href="#" class="">أجهزة منزلية</a></li>
+                                        <li class=""><a href="#" class="">الأدوات وتحسين المنزل</a></li>
+                                        <li class=""><a href="#" class="">الأثاث</a></li>
+                                        <li class=""><a href="#" class="">تخزين وتنظيم منزلي</a></li>
+                                        <li class=""><a href="#" class="">مستلزمات الحيوانات الأليفة</a></li>
+                                    </ul>
+                                </div>
+                                <div class="bannersColumn">
+                                    <div class="bannersContent">
+                                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-home-1.png"
+                                                    class=""></a></div>
+                                    </div>
+                                </div>
+                                <div id="fashion-banner2" class="bannersColumn">
+                                    <div class="bannersContent">
+                                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-home-2.png"
+                                                    class=""></a></div>
+                                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-home-2.png"
+                                                    class=""></a></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mega-menu">
+                        <a class="mobiles-dropdown" href="#!" data-target="mobiles-dropdown">الموبايلات</a>
+                        <div id="mobiles-dropdown" class="dropdown-content">
+                            <div class="contentWrapper">
+                                <div class="categoriesColumn">
+                                    <p class="title">الفئات</p>
+                                    <ul class="subCategoriesList right">
+                                        <li class=""><a href="#" class="">الموبايلات</a></li>
+                                        <li class=""><a href="#" class="">أجهزة التابلت</a></li>
+                                        <li class=""><a href="#" class="">الساعات الذكية</a></li>
+                                        <li class=""><a href="#" class="">بور بانك</a></li>
+                                        <li class=""><a href="#" class="">سماعات الموبايل</a></li>
+                                        <li class=""><a href="#" class="">كابلات الشحن</a></li>
+                                    </ul>
+                                </div>
+                                <div class="bannersColumn">
+                                    <div class="bannersContent">
+                                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-1.png"
+                                                    class=""></a></div>
+                                    </div>
+                                </div>
+                                <div id="fashion-banner2" class="bannersColumn">
+                                    <div class="bannersContent">
+                                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png"
+                                                    class=""></a></div>
+                                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png"
+                                                    class=""></a></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mega-menu">
+                        <a class="elctronic-dropdown" href="#!" data-target="elctronic-dropdown">الإلكترونيات</a>
+                        <div id="elctronic-dropdown" class="dropdown-content">
+                            <div class="contentWrapper">
+                                <div class="categoriesColumn">
+                                    <p class="title">الفئات</p>
+                                    <ul class="subCategoriesList right">
+                                        <li class=""><a href="#" class="">أجهزة الكمبيوتر المحمولة</a></li>
+                                        <li class=""><a href="#" class="">ألعاب الفيديو</a></li>
+                                        <li class=""><a href="#" class="">التلفزيونات</a></li>
+                                        <li class=""><a href="#" class="">أجهزة منزلية</a></li>
+                                        <li class=""><a href="#" class="">سماعات</a></li>
+                                        <li class=""><a href="#" class="">سماعات الرأس و سماعات الأذن</a></li>
+                                        <li class=""><a href="#" class="">أجهزة الصوت/الفيديو</a></li>
+                                        <li class=""><a href="#" class="">الساعات الذكية والإكسسوارات</a></li>
+                                        <li class=""><a href="#" class="">كاميرات وتصوير وفيديو</a></li>
+                                    </ul>
+                                </div>
+                                <div class="bannersColumn">
+                                    <div class="bannersContent">
+                                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-1.png"
+                                                    class=""></a></div>
+                                    </div>
+                                </div>
+                                <div id="fashion-banner2" class="bannersColumn">
+                                    <div class="bannersContent">
+                                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png"
+                                                    class=""></a></div>
+                                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-electronics-2.png"
+                                                    class=""></a></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mega-menu">
+                        <a class="fashion-dropdown" href="#!" data-target="fashion-dropdown">الأزياء</a>
+                        <div id="fashion-dropdown" class="dropdown-content">
+                            <div class="contentWrapper">
+                                <div class="categoriesColumn">
+                                    <p class="title">الفئات</p>
+                                    <ul class="subCategoriesList right">
+                                        <li class=""><a href="#" class="">الأزياء النسائية</a></li>
+                                        <li class=""><a href="#" class="">الأحذية</a></li>
+                                        <li class=""><a href="#" class="">أزياء رجالية</a></li>
+                                        <li class=""><a href="#" class="">الساعات</a></li>
+                                        <li class=""><a href="#" class="">إكسسوارات الأزياء</a></li>
+                                        <li class=""><a href="#" class="">النظارات</a></li>
+                                        <li class=""><a href="#" class="">حقائب يد للنساء</a></li>
+                                        <li class=""><a href="#" class="">أزياء البنات</a></li>
+                                        <li class=""><a href="#" class="">أزياء الأولاد</a></li>
+                                    </ul>
+                                </div>
+                                <div class="bannersColumn">
+                                    <div class="bannersContent">
+                                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-fashion-1.png"
+                                                    class=""></a></div>
+                                    </div>
+                                </div>
+                                <div id="fashion-banner2" class="bannersColumn">
+                                    <div class="bannersContent">
+                                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-fashion-2.png"
+                                                    class=""></a></div>
+                                        <div class=""><a class="banner"><img src="https://a.nooncdn.com/cms/pages/20180820/58f5a14be2603fdb03061d59e0801ded/ar-top-beauty-2.png"
+                                                    class=""></a></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End of Categories Menu -->
+    </div> <!-- END OF SITE HEADER -->
+
+    <!--   page wrapper -->
+    <div class="page-wrapper">
+        <div class="form-container">
+            <div class="back-cta">
+                <a href="/checkout/address.html">
+                    <i class="fa fa-angle-right"></i>
+                    <span>العودة إلى العناوين</span>
+                </a>
+            </div>
+            <div class="form-panel">
+                <div class="heading">
+                    <h2 class="form-title">إضافة عنوان جديد</h2>
+                </div>
+                <form action="">
+                    <div class="form-row">
+                        <div class="form-col right-side">
+                            <div class="form-header">
+                                <h2 class="form-title title">معلومات شخصية</h2>
+                            </div>
+                            <div class="form-item input-field">
+                                <label for="first-name">الإسم الأول</label>
+                                <input type="text" name="first-name" id="first-name">
+                            </div>
+                            <div class="form-item input-field">
+                                <label for="last-name">اسم العائلة</label>
+                                <input type="text" name="last-name" id="last-name">
+                            </div>
+                            <div class="form-item input-field">
+                                <label for="phone-number">رقم الموبايل</label>
+                                <input type="number" name="phone-number" id="phone-number">
+                            </div>
+                            <div class="address-name-wrapper form-item input-field">
+                                <span class="title">تسمية العنوان</span>
+                                <div class="radio-group">
+                                    <label>
+                                        <input name="address-name" type="radio" />
+                                        <span>المنزل</span>
+                                    </label>
+                                    <label>
+                                        <input name="address-name" type="radio" />
+                                        <span>العمل</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-col left-side">
+                            <div class="form-header">
+                                <h2 class="form-title title">معلومات الموقع</h2>
+                            </div>
+                            <div class="form-item input-field">
+                                <label for="country">الدولة</label>
+                                <input type="text" name="country" id="country" class="validate">
+                            </div>
+                            <div class="form-item input-field">
+                                <label for="city">المدينة</label>
+                                <input type="text" name="city" id="city" class="validate">
+                            </div>
+                            <div class="form-item input-field">
+                                <label for="neighbour">الحي</label>
+                                <input type="text" name="neighbour" id="neighbour" class="validate">
+                            </div>
+                            <div class="form-item input-field">
+                                <label for="building-no">رقم الشقة، المبنى، رقم البرج</label>
+                                <input type="text" name="building-no" id="building-no   " class="validate">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <button type="submit" class="submit-button btn">حفظ العنوان</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row" dir="rtl">
+                    <div class="col l4 m4 s12">
+                        <h5 class=""> إلكترونيات</h5>
+                        <ul>
+                            <li><a class="" href="#!">أجهزة منزلية</a></li>
+                            <li><a class="" href="#!">أجهزة الكمبيوتر المحمول</a></li>
+                            <li><a class="" href="#!">سماعات</a></li>
+                            <li><a class="" href="#!">التلفزيونات</a></li>
+                            <li><a class="" href="#!">أجهزة الصوت والفيديو</a></li>
+                            <li><a class="" href="#!">الساعات الذكية والإكسسوارات</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l4 m4 s12">
+                        <h5 class="">المنزل</h5>
+                        <ul>
+                            <li><a class="" href="#!">ديكورات المنزل</a></li>
+                            <li><a class="" href="#!">مطبخ و أدوات طعام</a></li>
+                            <li><a class="" href="#!">تخزيين وتنظيم منزلي</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l4 m4 s12">
+                        <h5 class="">جوالات</h5>
+                        <ul>
+                            <li><a class="" href="#!">أبل</a></li>
+                            <li><a class="" href="#!">سامسونج</a></li>
+                            <li><a class="" href="#!">هواواي</a></li>
+                            <li><a class="" href="#!">لينفو</a></li>
+                            <li><a class="" href="#!">ون بلس</a></li>
+                            <li><a class="" href="#!">اتش تي سي</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" dir="rtl" style="margin-bottom:40px; text-align:center;">
+                    <div class="col l12 m12 s12">
+                        <h5 class=""> تواصل معنا</h5>
+                        <ul>
+                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating   waves-effect waves-light"><i
+                                        class="fa fa-facebook"></i></a></li>
+                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating   waves-effect waves-light"><i
+                                        class="fa fa-snapchat"></i></a></li>
+                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating  waves-effect waves-light"><i
+                                        class="fa fa-instagram"></i></a></li>
+                            <li style="display:inline; margin-left:8px;"> <a class="btn-floating   waves-effect waves-light"><i
+                                        class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright" style="color: #1D3557">
+                <div class="container row" dir=rtl style="text-align: center;">
+                    <div class="col l8 m8  s12">
+                        <ul>
+                            <li style="display: inline-block; margin-left:20px;"><a class="" href="#!">سياسة الضمان</a></li>
+                            <li style="display: inline-block; margin-left:20px;"><a class="" href="#!">شروط البيع</a></li>
+                            <li style="display: inline-block; margin-left:20px;"><a class="" href="#!">سياسة الخصوصية</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l4 m4  s12">
+
+                        © جميع الحقوق محفوظة
+                        <a class="" href="#!">لشركة طور</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+    </div>
+    <div class="overlay"></div>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../zoom-master/jquery.zoom.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript" src="../elevatezoom-master/jquery.elevatezoom.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+</body>
+
+</html>
