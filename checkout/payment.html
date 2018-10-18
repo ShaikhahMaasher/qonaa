@@ -343,10 +343,10 @@
     <div class="page-wrapper">
         <div class="progress-indicator three-steps">
             <ul class="steps">
-                <li class="step active">
+                <li class="step completed">
                     عنوان الشحن
                 </li>
-                <li class="step">
+                <li class="step active">
                     الدفع
                 </li>
                 <li class="step">
@@ -354,79 +354,321 @@
                 </li>
             </ul>
         </div>
-        <div class="form-container">
-            <div class="back-cta">
-                <a href="/checkout/address.html">
-                    <i class="fa fa-angle-right"></i>
-                    <span>العودة إلى العناوين</span>
-                </a>
-            </div>
-            <div class="form-panel">
-                <div class="heading">
-                    <h2 class="form-title">إضافة عنوان جديد</h2>
-                </div>
-                <form action="">
-                    <div class="form-row">
-                        <div class="form-col right-side">
-                            <div class="form-header">
-                                <h2 class="form-title title">معلومات شخصية</h2>
+        <!--Paymet page -->
+        <div class="form-container content-wrapper">
+            <div class="row">
+                <!--Main payment content container  -->
+                <div id="main-payment-content-container" class="col l8 m7 s12 right">
+                    <div class="payment-title title">
+                        <p>
+                            الدفع
+                        </p>
+                    </div>
+                    <div class="payment-content-container">
+                        <div class="title">
+                            <p>
+                                طريقة الدفع
+                            </p>
+                        </div>
+                        <div class="row payment-options">
+                            <div class="col s6 right">
+                                <button class="btn selected credit-card">
+                                    <i class="fa fa-credit-card" aria-hidden="true">
+                                    </i>
+                                    الدفع بالبطاقة
+                                </button>
                             </div>
-                            <div class="form-item input-field">
-                                <label for="first-name">الإسم الأول</label>
-                                <input type="text" name="first-name" id="first-name">
+                            <div class="col s6">
+                                <button class="btn cash-on-delivery">
+                                    <i class="fa fa-money"></i>
+                                    الدفع نقداً
+                                </button>
                             </div>
-                            <div class="form-item input-field">
-                                <label for="last-name">اسم العائلة</label>
-                                <input type="text" name="last-name" id="last-name">
+                        </div>
+                        <div class="payment-method-wrapper">
+                            <div class="form-container">
+                                <form action="">
+                                    <div class="row">
+                                        <div class="filed-wrapper col s12">
+                                            <label for="card-number">رقم البطاقة</label>
+                                            <div class="intput-wrapper">
+                                                <input placeholder="**** **** **** ****" name="card-number" type="text"
+                                                    class="validate browser-default">
+                                            </div>
+                                        </div>
+                                        <div class="filed-row  col l8 s12 right">
+                                            <div class="filed-wrapper col s6">
+                                                <label for="card-number">cvv</label>
+                                                <div class="intput-wrapper with-tooltip">
+                                                    <input placeholder="الرمز" name="card-cvv" type="text" class="validate browser-default">
+                                                    <span class="input-helper">
+                                                        <i class="fa fa-question-circle" style="    color: rgb(226, 229, 241);
+                                                           font-size: 20px;"></i>
+                                                        <div class="tooltip">
+                                                            <div class="tooltip-text">أدخل الرمز المكون من 3 أرقام
+                                                                الموجود على ظهر البطاقة</div>
+                                                            <span class="card-icon"></span>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="filed-wrapper col s6">
+                                                <label for="card-number">تاريخ إنتهاء الصلاحية</label>
+                                                <div class="intput-wrapper-expiry">
+                                                    <div class="card-expiry-month">
+                                                        <input placeholder="الشهر" name="month-expiry-card" type="text"
+                                                            class="validate browser-default">
+                                                    </div>
+                                                    <div class="expiry-separator">
+                                                        <input placeholder="/" type="text" disabled class="validate browser-default">
+                                                    </div>
+                                                    <div class="card-expiry-year">
+                                                        <input placeholder="السنة" name="year-expiry-card" type="text"
+                                                            class="validate browser-default">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="form-item input-field">
-                                <label for="phone-number">رقم الموبايل</label>
-                                <input type="number" name="phone-number" id="phone-number">
+                            <div class="cash-on-dilvery-container" style="display:none;">
+                                <p>
+                                    يرجى الملاحظة أن هناك رسوم غير قابلة للاسترداد 17.00 ر.س.‏ لخدمة الدفع نقداً عند
+                                    التسليم.
+                                </p>
+                                <p>
+                                    لتوفير هذا المبلغ، يرجى
+                                    <span class="switch-payment-method">الدفع باستخدام البطاقة.</span>
+                                </p>
                             </div>
-                            <div class="address-name-wrapper form-item input-field">
-                                <span class="title">تسمية العنوان</span>
-                                <div class="radio-group">
-                                    <label>
-                                        <input name="address-name" type="radio" />
-                                        <span>المنزل</span>
-                                    </label>
-                                    <label>
-                                        <input name="address-name" type="radio" />
-                                        <span>العمل</span>
-                                    </label>
+                        </div>
+                        <div class="title" style="padding-top: 15px; margin-bottom: 12px;">
+                            <p>
+                                <strong>
+                                    هل تريد شحن المنتجات معاً؟
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="shipment-text-container">
+                            <div class="shipment-text">
+                                <label class="select-box">
+                                    <input type="checkbox" class="filled-in" right />
+                                    <span>توصيل المنتجات في أقل عدد ممكن من الشحنات</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="place-order-container">
+                            <button class="btn" disabled>
+                                تأكيد الطلبية
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Order List -->
+                    <div id="orders-list-container">
+                        <div class="title">
+                            طلبيتك
+                        </div>
+                        <!--Cart section  -->
+                        <div class="row cart-item-list">
+                            <div class="col m12 s12 cart-item">
+                                <div class="core-details-container">
+                                    <div class="image-container">
+                                        <a href="#">
+                                            <div class="container" style="padding-bottom: 126.375%;">
+                                                <div class="media-container">
+                                                    <img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1515052637/N13098156A_1.jpg"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="details-container">
+                                        <p class="brand">
+                                            بوجابو
+                                        </p>
+                                        <p class="product-name">
+                                            عربة أطفال كاميليون 3 مزودة بمظلة شمس قابلة للتمديد
+                                        </p>
+                                        <div class="qty">
+                                            الكمية:
+                                            <span class="qty-num">3</span>
+                                        </div>
+                                        <div class="delivery-time">
+                                            <span>تاريخ التوصيل المتوقع:</span>
+                                            <span class="bold">السَبْت, أكتوبر 20</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price bold">
+                                    <span>
+                                        4761 ر.س.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col m12 s12 cart-item">
+                                <div class="core-details-container">
+                                    <div class="image-container">
+                                        <a href="#">
+                                            <div class="container" style="padding-bottom: 126.375%;">
+                                                <div class="media-container">
+                                                    <img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1515310172/N11202025A_1.jpg"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="details-container">
+                                        <p class="brand">
+                                            ديسكويرد2
+                                        </p>
+                                        <p class="product-name">
+                                            عطر وانت 100 مل
+                                        </p>
+                                        <div class="qty">
+                                            الكمية:
+                                            <span class="qty-num">1</span>
+                                        </div>
+                                        <div class="delivery-time">
+                                            <span>تاريخ التوصيل المتوقع:</span>
+                                            <span class="bold">الثلاثاء, أكتوبر 29</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-options">
+                                    <div class="price bold">
+                                        <span>
+                                            150 ر.س.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col m12 s12 cart-item">
+                                <div class="core-details-container">
+                                    <div class="image-container">
+                                        <a href="#">
+                                            <div class="container" style="padding-bottom: 126.375%;">
+                                                <div class="media-container">
+                                                    <img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1515310172/N11202025A_1.jpg"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="details-container">
+                                        <p class="brand">
+                                            ديسكويرد2
+                                        </p>
+                                        <p class="product-name">
+                                            عطر وانت 100 مل
+                                        </p>
+                                        <div class="qty">
+                                            الكمية:
+                                            <span class="qty-num">1</span>
+                                        </div>
+                                        <div class="delivery-time">
+                                            <span>تاريخ التوصيل المتوقع:</span>
+                                            <span class="bold">الثلاثاء, أكتوبر 29</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-options">
+                                    <div class="price bold">
+                                        <span>
+                                            150 ر.س.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col m12 s12 cart-item">
+                                <div class="core-details-container">
+                                    <div class="image-container">
+                                        <a href="#">
+                                            <div class="container" style="padding-bottom: 126.375%;">
+                                                <div class="media-container">
+                                                    <img src="https://k.nooncdn.com/t_desktop-pdp-v1/v1515310172/N11202025A_1.jpg"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="details-container">
+                                        <p class="brand">
+                                            ديسكويرد2
+                                        </p>
+                                        <p class="product-name">
+                                            عطر وانت 100 مل
+                                        </p>
+                                        <div class="qty">
+                                            الكمية:
+                                            <span class="qty-num">1</span>
+                                        </div>
+                                        <div class="delivery-time">
+                                            <span>تاريخ التوصيل المتوقع:</span>
+                                            <span class="bold">الثلاثاء, أكتوبر 29</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-options">
+                                    <div class="price bold">
+                                        <span>
+                                            150 ر.س.
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-col left-side">
-                            <div class="form-header">
-                                <h2 class="form-title title">معلومات الموقع</h2>
+                        <!--End Cart Section  -->
+                    </div>
+                </div>
+                <!--End Main payment content container  -->
+                <!--payment-summary-->
+                <div id="payment-summry-container" class="col s12 l4 m5">
+                    <div class="invoice">
+                        <div class="invoice-summary">
+                            <p class="title" style="margin:0px;">ملخص الطلبية</p>
+                            <div class="invoice-row">
+                                <span class="heading">المجموع الفرعي</span>
+                                <span class="value">7346.70 ر.س.‏</span>
                             </div>
-                            <div class="form-item input-field">
-                                <label for="country">الدولة</label>
-                                <input type="text" name="country" id="country" class="validate">
+                            <div class="invoice-row">
+                                <span class="heading">الشحن</span>
+                                <span class="value">مجاني</span>
                             </div>
-                            <div class="form-item input-field">
-                                <label for="city">المدينة</label>
-                                <input type="text" name="city" id="city" class="validate">
+                            <div class="invoice-row cod-price" style="display:none;">
+                                <span class="heading">رسوم الدفع نقداً عند الاستلام</span>
+                                <span class="value"> 17.00 ر.س.‏</span>
                             </div>
-                            <div class="form-item input-field">
-                                <label for="neighbour">الحي</label>
-                                <input type="text" name="neighbour" id="neighbour" class="validate">
+                            <div class="total-row payment-total-row invoice-row">
+                                <span class="heading">المجموع
+                                    <span class="vat-note" style="margin-right:5px;">
+                                        (تتضمن الـ VAT)
+                                    </span>
+                                </span>
+                                <span class="value">7296.70 ر.س.‏</span>
                             </div>
-                            <div class="form-item input-field">
-                                <label for="building-no">رقم الشقة، المبنى، رقم البرج</label>
-                                <input type="text" name="building-no" id="building-no   " class="validate">
+                            <div class="vat-price-row invoice-row">
+                                <span>
+                                    قيمة الضريبة
+                                </span>
+                                <span class="value">7296.70 ر.س.‏</span>
+                            </div>
+                            <div class="shipment-row invoice-row">
+                                <p class="title shipment-to">ملخص الطلبية</p>
+                                <a class="shipment-edit">تعديل</a>
+                            </div>
+                            <div class="address-row invoice-row">
+                                <p class="title">شيخة معاشر</p>
+                                <p>12 شقة ,ابرق الرغامة,جدة‎‎,المملكة العربية السعودية</p>
+                                <p class="phone">+966-56-0465938</p>
                             </div>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-col">
-                            <button type="submit" class="submit-button btn">حفظ العنوان</button>
-                        </div>
-                    </div>
-                </form>
+                </div>
+                <!--End payment-summary-->
             </div>
         </div>
+        <!--End Paymet page -->
         <!-- Footer -->
         <footer class="page-footer">
             <div class="container">
