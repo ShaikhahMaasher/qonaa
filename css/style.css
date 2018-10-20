@@ -1458,7 +1458,7 @@ li.account-box .account-dropdown .user-name {
         font-size: 9px;
     }
 
-    #product-list-container {
+    #product-list-container,#cart-wish-list-container {
         padding: 0;
     }
 
@@ -1525,6 +1525,9 @@ li.account-box .account-dropdown .user-name {
     .page-footer .footer-copyright{
         border-top:0px !important;
         background: #F7F9FE !important;
+    }
+    #cart-details-container {
+        margin-top: 20px !important;
     }
 }
 
@@ -1839,6 +1842,9 @@ li.account-box .account-dropdown .user-name {
 
     #payment-summry-container {
         margin-top: 0px !important;
+    }
+    #cart-details-container {
+        margin-top: 20px !important;
     }
 }
 
